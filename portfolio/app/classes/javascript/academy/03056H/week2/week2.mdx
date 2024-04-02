@@ -1,0 +1,97 @@
+### Week 1: Introduction to JavaScript Objects
+
+**Objective**: Students will gain a solid understanding of JavaScript objects, including how to create, access, and manipulate object properties and methods.
+
+**Total Duration**: 60 minutes
+
+#### Part 1: Introduction to Objects in JavaScript (10 mins)
+
+-   **Lecture**: Briefly introduce objects as fundamental elements in JavaScript used to store collections of data and more complex entities. Emphasize that objects can hold multiple data types, including numbers, strings, and functions.
+-   **Code Example**: Show a simple object representing a student.
+    ```javascript
+    let student = {
+        name: "Jordan",
+        grade: 11,
+        favoriteSubject: "Math",
+    };
+    ```
+
+#### Part 2: Creating and Modifying Objects (20 mins)
+
+-   **Creating Objects**: Demonstrate creating objects using literal notation and constructor functions.
+    -   **Literal Notation Example**:
+        ```javascript
+        let book = {
+            title: "The Great Gatsby",
+            author: "F. Scott Fitzgerald",
+            publishedYear: 1925,
+        };
+        ```
+    -   **Constructor Function Example**:
+        ```javascript
+        function Car(make, model, year) {
+            this.make = make;
+            this.model = model;
+            this.year = year;
+        }
+        let myCar = new Car("Toyota", "Corolla", 2021);
+        ```
+-   **Modifying Objects**: Show how to add, modify, and delete properties from an object.
+    -   **Adding a New Property**:
+        ```javascript
+        book.genre = "Novel";
+        ```
+    -   **Modifying an Existing Property**:
+        ```javascript
+        student.grade = 12;
+        ```
+    -   **Deleting a Property**:
+        ```javascript
+        delete book.publishedYear;
+        ```
+
+#### Part 3: Accessing Properties and Methods (20 mins)
+
+-   **Accessing Properties**: Explain and demonstrate accessing object properties using dot and bracket notations.
+    -   **Dot Notation**:
+        ```javascript
+        console.log(student.name); // Output: Jordan
+        ```
+    -   **Bracket Notation**:
+        ```javascript
+        console.log(student["favoriteSubject"]); // Output: Math
+        ```
+-   **Defining and Calling Methods**: Show how to define methods within an object and how to call them. Discuss the `this` keyword.
+    -   **Method Definition & Calling**:
+        ```javascript
+        let person = {
+            name: "Alex",
+            greet: function () {
+                console.log("Hello, my name is " + this.name);
+            },
+        };
+        person.greet(); // Output: Hello, my name is Alex
+        ```
+
+#### Part 4: Practical Use Cases of Objects (10 mins)
+
+-   **Use Case Examples**: Briefly discuss practical use cases of objects to store and manipulate data. Show examples of objects being used to manage user information, configurations, and complex data structures like nested objects or arrays within objects.
+-   **Nested Object Example**:
+    ```javascript
+    let user = {
+        name: "Sam",
+        address: {
+            street: "123 Main St",
+            city: "Anytown",
+            zipCode: "12345",
+        },
+    };
+    console.log(user.address.city); // Output: Anytown
+    ```
+
+### Homework Assignment
+
+-   **Practice Task**: Students are tasked with creating three different objects using both literal notation and constructor functions. They should practice adding, modifying, and deleting properties, as well as creating methods within these objects.
+-   **Reading Assignment**: Assign a reading on JavaScript objects from a reputable online resource like MDN Web Docs, focusing on properties, methods, and the `this` keyword.
+
+By incorporating more code examples and detailed explanations, students will have a comprehensive understanding of JavaScript objects, laying a solid foundation for further exploration in the following weeks.

@@ -15,6 +15,12 @@ export default function Classes() {
             >
                 Introduction Python for Adults 04106A
             </Link>
+            <Link
+                href="/classes/javascript/academy/03056H"
+                className="flex justify-center"
+            >
+                Javascript Coding Academy 03056H
+            </Link>
         </div>
     );
 }
