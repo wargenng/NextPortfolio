@@ -1,13 +1,213 @@
-# Welcome to my MDX page!
+## Week 1: Advanced Data Structures
 
-This is some **bold** and _italics_ text.
+**Objective:** Gain a comprehensive understanding of sets, dictionaries, and tuples in Python, including when and how to use them effectively.
 
-This is a list in markdown:
+**Duration:** 90 minutes
 
--   One
--   Two
--   Three
+Class Structure:
+**Introduction (10 minutes)**
 
-export default ({children} ) => <div className="prose"> {children} </div
+-   Review basic data structures (lists).
+-   Introduce the day's focus: sets, dictionaries, and tuples.
+-   Highlight the importance of choosing the right data structure with real-world examples.
 
->
+**Sets (20 minutes)**
+
+-   Definition and Creation: Explain what sets are and how to create them. Highlight their uniqueness property.
+    -   Sets in Python are an unordered collection of unique items. They are similar to lists and tuples in that they can contain elements of various data types, but they differ significantly in a few key aspects. Sets are defined by their uniqueness of elements and lack of ordered indexing, which makes them ideal for certain operations such as membership testing, eliminating duplicates, and performing mathematical set operations like union, intersection, and difference.
+    -   Sets are created by enclosing items within curly braces {} or by using the set() constructor. It's important to note that, unlike lists or dictionaries, sets do not retain the order of elements. Furthermore, since sets only store unique elements, adding a duplicate item to a set will not change the set.
+    -   Why Use Sets?
+        -   Efficiency for Certain Operations: Sets are highly optimized for membership tests, such as checking whether an item is part of a set. This operation is faster on sets than on lists.
+        -   Mathematical Set Operations: Sets support operations like union (|), intersection (&), difference (-), and symmetric difference (^) which are useful for comparing collections.
+        -   Eliminating Duplicates: Sets automatically remove duplicate items, which can be very handy for filtering unique items from a collection.
+
+```py
+# Create a set of unique items
+
+fruits = "apple", "banana", "cherry"
+```
+
+-   Operations: Demonstrate basic set operations (addition, removal, union, intersection, difference).
+
+```py
+# Add an item to the set
+
+fruits.add("orange")
+
+# Find the union of two sets
+
+more_fruits = {"pineapple", "mango"}
+all_fruits = fruits.union(more_fruits)
+
+# Creating a set with mixed data types
+
+my_set = {1, "Hello", (1, 2, 3)}
+
+# Removing an item, if the item does not exist, no error is raised
+
+my_set.discard("Hello")
+
+# Intersection of two sets (common elements)
+
+set_a = {1, 2, 3, 4}
+set_b = {3, 4, 5, 6}
+common_elements = set_a.intersection(set_b) # Output: {3, 4}
+
+# Difference of two sets (elements in set_a but not in set_b)
+
+unique_to_a = set_a.difference(set_b) # Output: {1, 2}
+```
+
+-   Use Cases: Discuss scenarios where sets are preferable over lists or dictionaries.
+    -   Sets are ideal for operations involving membership testing and eliminating duplicate entries. For example, quickly determining whether an item exists in a collection of items.
+
+```py
+my_list = [1, 2, 2, 3, 4, 4, 5]
+unique_items = set(my_list) # Output: {1, 2, 3, 4, 5}
+```
+
+**Dictionaries (30 minutes)**
+
+-   Definition and Creation: Dive into dictionaries, emphasizing key-value pairing.
+    -   Dictionaries in Python are versatile data structures that allow storing pairs of keys and values. They are mutable, meaning their contents can change during the execution of a program. Unlike lists and tuples, which are indexed by a range of numbers, dictionaries are indexed by keys, which can be any immutable type; strings and numbers can always be keys. This key-value pairing provides a straightforward way to store and retrieve data efficiently based on a unique identifier. 2. Why Use Dictionaries?
+        -   Efficiency: Retrieving or modifying data based on a key is very fast, regardless of the size of the dictionary.
+        -   Flexibility: Values in a dictionary can be of any data type, and a single dictionary can store a mix of different types.
+        -   Intuitiveness: Key-value pairs naturally model real-world data, making dictionaries ideal for representing complex information, like records or settings.
+
+```py
+# Create a dictionary with key-value pairs
+
+# person = {"name": "John", "age": 30, "city": "New York"}
+
+# Dictionary with various data types as values
+
+person_info = {"name": "John", "age": 30, "married": True, "children": ["Alice", "Bob"]}
+
+# Creating a dictionary
+
+my_dict = {"name": "John", "age": 30, "city": "New York"}
+
+# Creating a dictionary using the dict constructor
+
+another_dict = dict(name="Alice", age=25, city="Los Angeles")
+
+print(my_dict) # Output: {'name': 'John', 'age': 30, 'city': 'New York'}
+print(another_dict) # Output: {'name': 'Alice', 'age': 25, 'city': 'Los Angeles'}
+```
+
+-   Operations: Cover accessing, adding, removing items, and looping through keys, values, and items.
+
+```py
+# Accessing the value for a key
+
+print(person["name"])
+
+# Adding a new key-value pair
+
+person["job"] = "Engineer"
+```
+
+-   Advanced Techniques: Briefly touch on dictionary comprehensions and using dictionaries to manage data efficiently.
+-   Use Cases: Explain how dictionaries can be used for fast lookups and structured data storage.
+    -   Dictionaries are perfect for storing data that can be uniquely identified by a key, such as storing the attributes of an object or counting the occurrences of words in a text.
+
+```py
+users = {
+"user1": {"name": "Alice", "email": "alice@example.com"},
+"user2": {"name": "Bob", "email": "bob@example.com"},
+}
+```
+
+**Tuples (20 minutes)**
+
+-   Definition and Creation: Describe tuples and how they differ from lists in terms of immutability.
+-   Tuples are one of the fundamental data types in Python that are used to store a collection of items. They are very similar to lists in many ways, such as being able to store items of different data types, allowing duplicate values, and supporting indexing and slicing. However, the key difference between tuples and lists lies in their mutability:
+    -   Lists are mutable, which means that their contents can be changed after they are created. You can add, remove, or modify items in a list.
+    -   Tuples, on the other hand, are immutable. Once a tuple is created, its contents cannot be altered. This means you cannot add, remove, or change the items in a tuple after it has been created.
+    -   Why Choose Tuples Over Lists?
+        -   The immutability of tuples has several benefits:
+        -   Safety: Data cannot be modified unintentionally.
+        -   Performance: Accessing elements in a tuple can be slightly faster than in a list because tuples are immutable and their hash value remains constant.
+        -   Hashability: Since tuples are immutable, they can be used as keys in dictionaries, whereas lists cannot.
+
+```py
+# Create a tuple to represent a point in 2D space
+
+point = (3, 5)
+
+# A tuple containing different data types
+
+my_tuple = (123, "Hello", [10, 20, 30], ("A", "B"))
+
+# Creating a tuple
+
+my_tuple = (1, "Hello", 3.14)
+
+# Creating a tuple without parentheses
+
+another_tuple = 1, "Hello", 3.14
+
+# Creating a single-item tuple (note the comma)
+
+single_item_tuple = (42,)
+
+print(my_tuple) # Output: (1, "Hello", 3.14)
+print(another_tuple) # Output: (1, "Hello", 3.14)
+print(single_item_tuple) # Output: (42,)
+
+# Creating a list
+
+my_list = [1, "Hello", 3.14]
+
+# Adding an item to the list
+
+my_list.append(42)
+
+# Modifying an item in the list
+
+my_list[1] = "World"
+
+print(my_list) # Output: [1, "World", 3.14, 42]
+```
+
+-   Operations and Usage: Cover indexing, slicing, and iterating over tuples. Discuss when to use tuples over lists or dictionaries.
+
+```py
+# Accessing tuple elements
+
+x_coordinate = point[0]
+
+# Tuple unpacking
+
+x, y = point
+
+# Accessing tuple elements
+
+item = my_tuple[1] # Output: "Hello"
+
+# Slicing
+
+sub_tuple = my_tuple[1:3] # Output: ("Hello", [10, 20, 30])
+
+# Iterating over a tuple
+
+for item in my_tuple:
+print(item)
+```
+
+-   Practical Applications: Highlight scenarios where the immutable nature of tuples is advantageous.
+    -   Function Return Values: Returning multiple values from a function
+
+```py
+def min_max(numbers):
+return min(numbers), max(numbers)
+
+minimum, maximum = min_max([1, 2, 3, 4, 5]) # Outputs: (1, 5)
+```
+
+    - Immutable Data: Storing data that shouldn't change, like days of the week or coordinates.
+
+```py
+days_of_the_week = ("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
+coordinates = (40.7128, -74.0060)
+```
