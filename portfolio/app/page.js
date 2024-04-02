@@ -1,17 +1,9 @@
-import { CgAddR } from "react-icons/cg";
+import Link from "next/link";
 
 export default function Home() {
-    function changeSymbol(event) {
-        console.log(event);
-    }
     return (
         <div className="flex items-center justify-center w-screen h-screen">
-            <div className="flex items-center gap-2">
-                <button onClick={changeSymbol()}>
-                    <CgAddR />{" "}
-                </button>
-                wargen guittap
-            </div>
+            <Link href="/classes">Classes</Link>
         </div>
     );
 }
