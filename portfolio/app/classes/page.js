@@ -1,26 +1,25 @@
 import Link from "next/link";
+import { promises as fs } from "fs";
 
-export default function Classes() {
+export default async function Page() {
+    const file = await fs.readFile(
+        process.cwd() + "/app/classes/classes.json",
+        "utf8"
+    );
+    const data = JSON.parse(file);
+
     return (
         <div className="flex flex-col items-center w-screen h-screen">
-            <Link
-                href="/classes/python/intermediate/03258A"
-                className="flex justify-center"
-            >
-                Intermediate Python for Adults 03258A
-            </Link>
-            <Link
-                href="/classes/python/introduction/04106A"
-                className="flex justify-center"
-            >
-                Introduction Python for Adults 04106A
-            </Link>
-            <Link
-                href="/classes/javascript/academy/03056H"
-                className="flex justify-center"
-            >
-                Javascript Coding Academy 03056H
-            </Link>
+            {data.classes.map((course) => (
+                <Link
+                    href={`/classes/${course.subject.toLowerCase()}/${course.classType.toLowerCase()}/${
+                        course.classId
+                    }`}
+                    key={course.classId}
+                >
+                    {course.class + " " + course.classId}
+                </Link>
+            ))}
         </div>
     );
 }

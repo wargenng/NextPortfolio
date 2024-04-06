@@ -1,7 +1,12 @@
-import { Inter } from "next/font/google";
+import { Inter as FontSans } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+import { cn } from "@/lib/utils";
+
+const fontSans = FontSans({
+    subsets: ["latin"],
+    variable: "--font-sans",
+});
 
 export const metadata = {
     title: "woregin",
@@ -11,10 +16,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <html lang="en">
-            <body className={inter.className}>
-                <div className="flex flex-col items-center w-screen h-screen mt-12">
-                    {children}
-                </div>
+            <body
+                className={cn(
+                    "min-h-screen bg-background font-sans antialiased",
+                    fontSans.variable
+                )}
+            >
+                <div>{children}</div>
             </body>
         </html>
     );

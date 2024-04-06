@@ -1,0 +1,66 @@
+{
+    "timezone": "PST",
+    "dateFormat": "YYYY-MM-DD",
+    "classes": [
+        {
+            "class": "Introduction to JavaScript",
+            "classType": "Introduction",
+            "classId": "04075A",
+            "subject": "JavaScript",
+            "startDate": "2024-04-07",
+            "startTime": "1500",
+            "sessions": 8,
+            "studentCount": 6
+        },
+        {
+            "class": "Introduction to JavaScript",
+            "classType": "Introduction",
+            "classId": "031612A",
+            "subject": "JavaScript",
+            "startDate": "2024-03-16",
+            "startTime": "1000",
+            "sessions": 8,
+            "studentCount": 4
+        },
+        {
+            "class": "Javascript Coding Academy",
+            "classType": "Academy",
+            "classId": "033020H",
+            "subject": "JavaScript",
+            "startDate": "2024-03-30",
+            "startTime": "830",
+            "sessions": 4,
+            "studentCount": 7
+        },
+        {
+            "class": "Javascript Coding Academy",
+            "classType": "Academy",
+            "classId": "03056H",
+            "subject": "JavaScript",
+            "startDate": "2024-03-19",
+            "startTime": "1600",
+            "sessions": 4,
+            "studentCount": 5
+        },
+        {
+            "class": "Intermediate Python for Adults",
+            "classType": "Intermediate",
+            "classId": "03258A",
+            "subject": "Python",
+            "startDate": "2024-03-25",
+            "startTime": "1800",
+            "sessions": 8,
+            "studentCount": 5
+        },
+        {
+            "class": "Introduction to Python for Adults",
+            "classType": "Introduction",
+            "classId": "04106A",
+            "subject": "Python",
+            "startDate": "2024-04-10",
+            "startTime": "1630",
+            "sessions": 8,
+            "studentCount": 15
+        }
+    ]
+}
