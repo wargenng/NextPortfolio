@@ -18,11 +18,11 @@ export default function RootLayout({ children }) {
         <html lang="en">
             <body
                 className={cn(
-                    "min-h-screen bg-background font-sans antialiased flex justify-center lg:w-96",
+                    "min-h-screen bg-background font-sans antialiased flex justify-center",
                     fontSans.variable
                 )}
             >
-                <div>{children}</div>
+                {children}
             </body>
         </html>
     );

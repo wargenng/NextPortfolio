@@ -10,7 +10,7 @@ import {
 
 export default function Home() {
     return (
-        <div className="flex justify-center w-screen flex-col">
+        <div className="flex justify-center flex-col">
             <div className="w-full p-6 text-lg flex text-slate-500">
                 <Link href="/classes" className="grow">
                     woreg.in
