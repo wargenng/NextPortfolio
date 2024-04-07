@@ -11,7 +11,7 @@ export default async function Page() {
     const data = JSON.parse(file);
 
     return (
-        <div className="flex flex-col w-screen h-screen p-8">
+        <div className="flex flex-col w-full lg:w-1/2 h-screen p-8">
             {data.classes.map((course) => (
                 <Link
                     href={`/courses/${course.subject.toLowerCase()}/${course.classType.toLowerCase()}/${
