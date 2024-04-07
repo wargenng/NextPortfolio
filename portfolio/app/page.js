@@ -13,12 +13,12 @@ export default function Home() {
     return (
         <div className="flex justify-center items-center flex-col">
             <div className="w-full p-6 text-lg flex text-slate-500">
-                <Link href="/classes" className="grow">
+                <Link href="/courses" className="grow">
                     woreg.in
                 </Link>
                 <NavigationMenu>
                     <NavigationMenuList>
-                        <Link href="/classes" className="px-2">
+                        <Link href="/courses" className="px-2">
                             <NavigationMenuItem>Courses</NavigationMenuItem>
                         </Link>
                         <a href="https://github.com/wargenng">

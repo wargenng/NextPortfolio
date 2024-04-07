@@ -5,7 +5,7 @@ import { promises as fs } from "fs";
 
 export default async function Page() {
     const file = await fs.readFile(
-        process.cwd() + "/app/classes/classes.json",
+        process.cwd() + "/app/courses/courses.json",
         "utf8"
     );
     const data = JSON.parse(file);
@@ -14,7 +14,7 @@ export default async function Page() {
         <div className="flex flex-col items-center w-screen h-screen">
             {data.classes.map((course) => (
                 <Link
-                    href={`/classes/${course.subject.toLowerCase()}/${course.classType.toLowerCase()}/${
+                    href={`/courses/${course.subject.toLowerCase()}/${course.classType.toLowerCase()}/${
                         course.classId
                     }`}
                     key={course.classId}
