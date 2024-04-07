@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import About from "./components/about.mdx";
+import Image from "next/image";
 
 import {
     NavigationMenu,
@@ -10,7 +11,7 @@ import {
 
 export default function Home() {
     return (
-        <div className="flex justify-center flex-col">
+        <div className="flex justify-center items-center flex-col">
             <div className="w-full p-6 text-lg flex text-slate-500">
                 <Link href="/classes" className="grow">
                     woreg.in
@@ -29,6 +30,13 @@ export default function Home() {
             <h1 className="text-center text-4xl font-semibold ">
                 Wargen Guittap
             </h1>
+            <Image
+                src="/profile.png"
+                width={200}
+                height={200}
+                alt="Picture of the author"
+                className="py-3"
+            />
             <h2 className="text-center text-lg text-slate-500 py-3">
                 Software Engineer, Data Analyst
             </h2>
