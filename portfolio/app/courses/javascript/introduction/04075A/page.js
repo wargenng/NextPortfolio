@@ -13,7 +13,7 @@ import {
 } from "@/components/ui/breadcrumb";
 import { getCurrentCourse } from "@/app/courses/components/getCurrentCourse";
 
-export default async function Page() {
+export default function Page() {
     const path = usePathname();
     console.log(path.split("/").at(-1));
 
