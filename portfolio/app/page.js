@@ -1,7 +1,6 @@
 "use client";
 import About from "./components/about.mdx";
 import Image from "next/image";
-import NavBar from "./components/navbar";
 
 export default function Home() {
     return (
