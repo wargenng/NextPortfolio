@@ -1,4 +1,4 @@
-import Week from "./week4.mdx";
+import Week from "./week1.mdx";
 
 export default function Page() {
     return (
