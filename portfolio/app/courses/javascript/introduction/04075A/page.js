@@ -11,10 +11,14 @@ import {
     BreadcrumbPage,
     BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
+import { getCurrentCourse } from "@/app/courses/components/getCurrentCourse";
 
-export default function Page() {
+export default async function Page() {
     const path = usePathname();
-    console.log(path.split("/"));
+    console.log(path.split("/").at(-1));
+
+    // const course = await getCurrentCourse(path.split("/").at(-1));
+    // console.log(course);
     return (
         <>
             <div className="w-full px-6">
