@@ -3,6 +3,7 @@ import "./globals.css";
 
 import { cn } from "@/lib/utils";
 import NavBar from "./components/navbar";
+import Bread from "./components/breadcrumb";
 
 const fontSans = FontSans({
     subsets: ["latin"],
@@ -25,6 +26,7 @@ export default function RootLayout({ children }) {
             >
                 <div className="flex flex-col justify-center items-center w-full lg:w-8/12">
                     <NavBar />
+                    <Bread />
                     {children}
                 </div>
             </body>

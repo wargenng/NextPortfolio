@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { promises as fs } from "fs";
+import { getDayOfWeek } from "./components/getDayofWeek";
 
 export default async function Page() {
     const file = await fs.readFile(
@@ -9,6 +10,7 @@ export default async function Page() {
         "utf8"
     );
     const data = JSON.parse(file);
+    console.log(getDayOfWeek(data.classes[0].startDate));
 
     return (
         <div className="flex flex-col w-full lg:w-1/2 h-screen p-8">
@@ -22,6 +24,13 @@ export default async function Page() {
                         {course.classId}
                     </h1>
                     <p>{course.class}</p>
+                    <p className="italic text-slate-500">
+                        {getDayOfWeek(course.startDate) +
+                            " @" +
+                            course.startTime +
+                            " " +
+                            data.timezone}
+                    </p>
                 </Link>
             ))}
         </div>
