@@ -14,15 +14,12 @@ export default async function Page() {
         <div className="flex flex-col w-full lg:w-1/2 h-screen p-8">
             {data.classes.map((course) => (
                 <Link
-                    href={`/courses/${course.subject.toLowerCase()}/${course.classType.toLowerCase()}/${
-                        course.classId
-                    }`}
+                    href={`/courses/${course.classId}`}
                     key={course.classId}
                     className="pb-5 "
                 >
                     <h1 className="text-2xl font-semibold text-sky-600">
-                        {(course.subject === "JavaScript" ? "JS" : "PY") +
-                            course.classId}
+                        {course.classId}
                     </h1>
                     <p>{course.class}</p>
                 </Link>
