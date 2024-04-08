@@ -16,7 +16,7 @@ export default function Home() {
                 className="py-3"
             />
             <h2 className="text-center text-lg text-slate-500 py-3">
-                Software Engineer, Data Analyst
+                Game Developer, Data Analyst
             </h2>
             <div className="prose flex flex-col p-6">
                 <About />
