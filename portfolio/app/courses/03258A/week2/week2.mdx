@@ -1,1 +1,139 @@
-coming soon
+### Week 2: File Handling and Input/Output Operations in Python
+
+Welcome to Week 2 of Intermediate Python Programming for Adults. This week, we delve into essential file handling techniques, covering how to read from, write to, and manage files efficiently in Python. Understanding file operations is crucial for many programming tasks, such as data analysis, web scraping, and automation.
+
+#### Opening and Closing Files
+
+When working with files in Python, it's crucial to open the file before we can either read from or write to it. It's equally important to close the file once our operations are completed to free up system resources.
+
+-   **Opening a File**  
+    To open a file, we use the `open()` function, specifying the filename and the mode (`'r'` for read, `'w'` for write, etc.).
+
+    ```python
+    file = open('example.txt', 'r')
+    ```
+
+-   **Closing a File**  
+    After finishing with the file, we close it using the `close()` method.
+
+    ```python
+    file.close()
+    ```
+
+-   **Using the `with` Statement**  
+    The `with` statement simplifies the process of opening and closing files by handling it automatically.
+    ```python
+    with open('example.txt', 'r') as file:
+        # File operations go here
+    ```
+
+#### Reading from Files
+
+Reading files is a common task in Python. We can read the entire file content or process it line by line.
+
+-   **Reading Entire Content**
+
+    ```python
+    with open('example.txt', 'r') as file:
+        content = file.read()
+        print(content)
+    ```
+
+-   **Reading Lines**
+    ```python
+    with open('example.txt', 'r') as file:
+        lines = file.readlines()
+        for i, line in enumerate(lines):
+            print(f"{i+1}: {line.strip()}")
+    ```
+
+#### Writing to Files
+
+Writing to files allows us to save data persistently. Python makes it straightforward to write strings and lines to files.
+
+-   **Writing a String**
+
+    ```python
+    with open('output.txt', 'w') as file:
+        file.write("Hello, Python!")
+    ```
+
+-   **Writing Multiple Lines**
+    ```python
+    lines = ["Hello, Python!\n", "File handling is easy.\n"]
+    with open('output.txt', 'w') as file:
+        file.writelines(lines)
+    ```
+
+#### Working with CSV and JSON Files
+
+Handling structured data formats like CSV and JSON is common in various Python tasks.
+
+-   **Reading from a CSV File**
+
+    ```python
+    import csv
+    with open('data.csv', 'r') as file:
+        csv_reader = csv.reader(file)
+        for row in csv_reader:
+            print(row)
+    ```
+
+-   **Writing to a CSV File**
+
+    ```python
+    import csv
+    rows = [["Name", "Age"], ["Alice", 30], ["Bob", 25]]
+    with open('output.csv', 'w', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerows(rows)
+    ```
+
+-   **Working with JSON Files**
+    JSON files are prevalent in web data and configuration files.
+    -   **Writing to a JSON File**
+        ```python
+        import json
+        data = {"Name": "Alice", "Age": 30}
+        with open('data.json', 'w') as file:
+            json.dump(data, file)
+        ```
+    -   **Reading from a JSON File**
+        ```python
+        import json
+        with open('data.json', 'r') as file:
+            data = json.load(file)
+            print(data)
+        ```
+
+#### Exception Handling in File Operations
+
+Correctly handling errors and exceptions is crucial to making your programs robust and error-resistant.
+
+-   **Example of `try-except`**
+    ```python
+    try:
+        with open('non_existent_file.txt', 'r') as file:
+            content = file.read()
+    except FileNotFoundError:
+        print("Sorry, the file does not exist.")
+    ```
+
+#### Homework Assignment: File Statistics
+
+For your homework, create a Python script that reads a file specified by the user, counts the number of lines, words, and characters, and then writes these statistics to a new file.
+
+```python
+def file_statistics(input_file, output_file):
+    with open(input_file, 'r') as file:
+        lines = file.readlines()
+        words = sum(len(line.split()) for line in lines)
+        chars = sum(len(line) for line in lines)
+
+    with open(output_file, 'w') as file:
+        file.write(f"Lines: {len(lines)}\n")
+        file.write(f"Words: {words}\n")
+        file.write(f
+
+"Characters: {chars}\n")
+```
