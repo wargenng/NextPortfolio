@@ -11,6 +11,7 @@ export default function Page() {
             <Link href={`${path}/week2`}>
                 Week 2: File Handling and Input/Output Operations
             </Link>
+            <Link href={`${path}/week3`}>Functional Programming in Python</Link>
         </div>
     );
 }

@@ -1,0 +1,104 @@
+## Week 3: Functional Programming in Python
+
+### **Welcome to Week 3!**
+
+This week, we embark on an exciting journey through Functional Programming (FP) in Python. Having built a solid foundation in Python's basics and explored object-oriented programming, it's time to delve into a different paradigm. Functional programming offers a path to cleaner, more efficient code, particularly in data manipulation and analysis contexts.
+
+### **Why Functional Programming?**
+
+Functional programming is a style of building the structure and elements of computer programs—that treats computation as the evaluation of mathematical functions and avoids changing-state and mutable data.
+
+**Key Concepts:**
+
+-   **Immutability:** Data doesn't change. New data structures are created from existing ones.
+-   **First-Class and Higher-Order Functions:** Functions are treated as first-class citizens. This means they can be passed as arguments, returned by other functions, and assigned to variables. Higher-order functions can take functions as arguments or return them.
+-   **Pure Functions:** Functions that, given the same input, will always return the same output and do not have any side effects.
+
+### **Why Is Functional Programming Needed?**
+
+Functional programming is particularly beneficial for ensuring code consistency, enhancing readability, and simplifying testing. It's a paradigm that helps in writing predictable code, which is easier to debug due to its pure functions. Immutability in data is advantageous in concurrent programming, reducing errors common with shared mutable data.
+
+**Practical Uses of FP:**
+
+-   **Data Analysis and Science:** For manipulating data efficiently and clearly.
+-   **Concurrency:** Writing safer concurrent code thanks to data immutability.
+-   **Web Development:** Streamlining server-side logic for web applications.
+
+### **Lesson Overview**
+
+#### Part 1: Lambda Functions
+
+Lambda functions, or anonymous functions, are defined using the `lambda` keyword. They are succinct and useful for short-lived operations.
+
+```python
+# Lambda function to square a number
+square = lambda x: x ** 2
+print(square(4))
+
+# Lambda to check if a number is even
+is_even = lambda x: x % 2 == 0
+print(is_even(4))
+```
+
+```python
+# Lambda to combine two strings
+concatenate = lambda a, b: a + b
+print(concatenate("Hello, ", "Python!"))
+```
+
+#### Part 2: `map`, `filter`, and `reduce` Functions
+
+-   **`map` Function:** Transforms items in an iterable.
+
+```python
+# Convert names to uppercase
+names = ["alice", "bob", "charlie"]
+uppercase_names = list(map(str.upper, names))
+print(uppercase_names)
+
+# Square all numbers in a list
+numbers = [1, 2, 3, 4, 5]
+squared_numbers = list(map(lambda x: x ** 2, numbers))
+print(squared_numbers)
+```
+
+-   **`filter` Function:** Filters items from an iterable.
+
+```python
+# Filter out odd numbers
+numbers = [1, 2, 3, 4, 5, 6]
+even_numbers = list(filter(lambda x: x % 2 == 0, numbers))
+print(even_numbers)
+
+# Keep words with more than three letters
+words = ["tree", "is", "beautiful", "in", "spring"]
+long_words = list(filter(lambda w: len(w) > 3, words))
+print(long_words)
+```
+
+-   **`reduce` Function:** Reduces an iterable to a single value.
+
+```python
+from functools import reduce
+
+# Find the sum of numbers
+numbers = [1, 2, 3, 4, 5]
+sum_numbers = reduce(lambda x, y: x + y, numbers)
+print(sum_numbers)
+
+# Find the maximum number (mimic 'max' function)
+max_number = reduce(lambda a, b: a if a > b else b, numbers)
+print(max_number)
+```
+
+#### Part 3: Best Practices and Use Cases
+
+While functional programming can enhance your code's efficiency and readability, it's crucial to balance its use. Overuse can lead to code that's hard for others to understand at a glance. It shines in data processing scenarios, simplifying complex data transformations and analyses.
+
+### **Homework Assignment**
+
+Select a dataset and apply `map`, `filter`, and `reduce` for data cleaning, transformation, and summarization tasks. Document your approach and results.
+
+### **Conclusion**
+
+This week's exploration of functional programming has introduced you to a powerful paradigm for writing Python code. Its principles, especially around pure functions and immutability, can significantly aid in data manipulation tasks. Remember, practice is key to mastering these concepts, so approach the homework with enthusiasm!
