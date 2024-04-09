@@ -46,7 +46,7 @@ concatenate = lambda a, b: a + b
 print(concatenate("Hello, ", "Python!"))
 ```
 
-#### Part 2: `map`, `filter`, and `reduce` Functions
+#### Part 2: `map`, `filter`, `sum`, `min`, `max` Functions
 
 -   **`map` Function:** Transforms items in an iterable.
 
@@ -76,19 +76,24 @@ long_words = list(filter(lambda w: len(w) > 3, words))
 print(long_words)
 ```
 
--   **`reduce` Function:** Reduces an iterable to a single value.
+-   **`sum`, `min`, `max` Functions:** Reduces an iterable to a single value (in this case sum, min, and max of the iterable).
 
 ```python
-from functools import reduce
+# gives the sum of numbers list
+numbers = [1,2,3,4,5]
+print(sum(numbers)) # sum = 15
 
-# Find the sum of numbers
-numbers = [1, 2, 3, 4, 5]
-sum_numbers = reduce(lambda x, y: x + y, numbers)
-print(sum_numbers)
+# gives the max of the numbers list
+numbers = [1,2,3,4,5]
+print(max(numbers)) # max = 5
 
-# Find the maximum number (mimic 'max' function)
-max_number = reduce(lambda a, b: a if a > b else b, numbers)
-print(max_number)
+# gives the min of the numbers list
+numbers = [1,2,3,4,5]
+print(min(numbers)) # min = 1
+
+# squares every number in the list and sums the list
+sum_square = sum(list(map(lambda x: x ** 2, numbers)))
+print(sum_square) # result = 55
 ```
 
 #### Part 3: Best Practices and Use Cases
