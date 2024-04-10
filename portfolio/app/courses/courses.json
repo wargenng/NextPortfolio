@@ -61,6 +61,16 @@
             "startTime": "1630",
             "sessions": 8,
             "studentCount": 15
+        },
+        {
+            "class": "Using Chat-GPT for Students & Young Professionals",
+            "classType": "Applied AI",
+            "classId": "04028A",
+            "subject": "Applied AI",
+            "startDate": "2024-04-09",
+            "startTime": "1800",
+            "sessions": 3,
+            "studentCount": 7
         }
     ]
 }
