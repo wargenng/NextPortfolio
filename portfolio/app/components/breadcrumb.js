@@ -53,12 +53,8 @@ export default function Bread() {
 }
 
 export function capitalizeFirstLetter(str) {
-    // Check if the first character is a letter by using a regular expression
-    if (str.charAt(0).match(/[a-z]/i)) {
-        // If it's a letter, convert the first character to uppercase
-        // and concatenate it with the rest of the string
-        return str.charAt(0).toUpperCase() + str.slice(1);
-    }
-    // If the first character is not a letter, return the original string
-    return str;
+    return str
+        .split("-")
+        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(" ");
 }
