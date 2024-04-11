@@ -1,19 +1,13 @@
 "use server";
 
 import Link from "next/link";
-import { promises as fs } from "fs";
 import { getDayOfWeek } from "./components/getDayOfWeek";
+import { courses } from "./courses";
 
 export default async function Page() {
-    const file = await fs.readFile(
-        process.cwd() + "/app/courses/courses.json",
-        "utf8"
-    );
-    const data = JSON.parse(file);
-
     return (
         <div className="flex flex-col w-full lg:w-1/2 h-screen p-8">
-            {data.classes.map((course) => (
+            {courses.classes.map((course) => (
                 <Link
                     href={`/courses/${course.classId}`}
                     key={course.classId}
@@ -28,7 +22,7 @@ export default async function Page() {
                             " @" +
                             course.startTime +
                             " " +
-                            data.timezone}
+                            courses.timezone}
                     </p>
                 </Link>
             ))}
