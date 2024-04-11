@@ -23,6 +23,36 @@
             "studentCount": 4
         },
         {
+            "class": "Introduction to Python for Adults",
+            "classType": "Introduction",
+            "classId": "04106A",
+            "subject": "Python",
+            "startDate": "2024-04-10",
+            "startTime": "1630",
+            "sessions": 8,
+            "studentCount": 15
+        },
+        {
+            "class": "Using Chat-GPT for Students & Young Professionals",
+            "classType": "Applied AI",
+            "classId": "04028A",
+            "subject": "InformationTechnology",
+            "startDate": "2024-04-09",
+            "startTime": "1800",
+            "sessions": 3,
+            "studentCount": 7
+        },
+        {
+            "class": "Intermediate Python for Adults",
+            "classType": "Intermediate",
+            "classId": "03258A",
+            "subject": "Python",
+            "startDate": "2024-03-25",
+            "startTime": "1800",
+            "sessions": 8,
+            "studentCount": 5
+        },
+        {
             "class": "Javascript Coding Academy",
             "classType": "Academy",
             "classId": "033020H",
@@ -41,36 +71,6 @@
             "startTime": "1600",
             "sessions": 4,
             "studentCount": 5
-        },
-        {
-            "class": "Intermediate Python for Adults",
-            "classType": "Intermediate",
-            "classId": "03258A",
-            "subject": "Python",
-            "startDate": "2024-03-25",
-            "startTime": "1800",
-            "sessions": 8,
-            "studentCount": 5
-        },
-        {
-            "class": "Introduction to Python for Adults",
-            "classType": "Introduction",
-            "classId": "04106A",
-            "subject": "Python",
-            "startDate": "2024-04-10",
-            "startTime": "1630",
-            "sessions": 8,
-            "studentCount": 15
-        },
-        {
-            "class": "Using Chat-GPT for Students & Young Professionals",
-            "classType": "Applied AI",
-            "classId": "04028A",
-            "subject": "Applied AI",
-            "startDate": "2024-04-09",
-            "startTime": "1800",
-            "sessions": 3,
-            "studentCount": 7
         }
     ]
 }

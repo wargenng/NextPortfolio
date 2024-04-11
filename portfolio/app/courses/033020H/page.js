@@ -1,9 +1,12 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import Link from "next/link";
+import LessonPlans from "../components/lessonplans";
 
 export default function Page() {
     const path = usePathname();
-    return <div className="flex flex-col items-center w-screen h-screen"></div>;
+    const course = "Javascript Coding Academy";
+    const weeks = [];
+
+    return <LessonPlans path={path} course={course} weeks={weeks} />;
 }
