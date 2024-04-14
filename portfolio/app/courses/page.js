@@ -7,6 +7,7 @@ import { courses } from "./courses";
 export default async function Page() {
     return (
         <div className="flex flex-col w-full lg:w-1/2 h-screen p-8">
+            <h1 className="text-4xl pb-3 font-bold">Courses</h1>
             {courses.classes.map((course) => (
                 <Link
                     href={`/courses/${course.classId}`}

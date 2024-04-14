@@ -19,6 +19,14 @@ export const courses = {
                         "introduction-to-JavaScript",
                     ],
                 },
+                {
+                    id: 2,
+                    lesson: [
+                        "control-flow-functions-and-arrow-functions-in-JavaScript",
+                        "arrow-functions-in-JavaScript",
+                        "JavaScript-functions-exercise",
+                    ],
+                },
             ],
         },
         {
