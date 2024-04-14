@@ -23,6 +23,11 @@ export const courses = {
                     id: 2,
                     lesson: [
                         "control-flow-functions-and-arrow-functions-in-JavaScript",
+                        "if-statements-in-JavaScripit",
+                        "switch-statements-in-JavaScript",
+                        "for-loops-in-JavaScript",
+                        "while-loops-in-JavaScript",
+                        "functions-in-JavaScript",
                         "arrow-functions-in-JavaScript",
                         "JavaScript-functions-exercise",
                     ],

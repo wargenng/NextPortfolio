@@ -1,5 +1,9 @@
 {
   "dependencies": {
-    "react-icons": "^5.0.1"
+    "@mdx-js/mdx": "^3.0.1",
+    "prismjs": "^1.29.0",
+    "react-icons": "^5.0.1",
+    "rehype": "^13.0.1",
+    "rehype-highlight": "^7.0.0"
   }
 }

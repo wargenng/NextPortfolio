@@ -1,8 +1,23 @@
+"use client";
+
 import dynamic from "next/dynamic";
 import { courses } from "../../courses";
 import Pagi from "../../components/pagination";
+import Prism from "prismjs";
+import { useEffect } from "react";
+
+require("prismjs/components/prism-javascript");
+
+require("prismjs/components/prism-css");
+
+require("prismjs/components/prism-jsx");
 
 export default async function Page({ params }) {
+    useEffect(() => {
+        console.log("IN HEWRE");
+        Prism.highlightAll();
+    }, []);
+
     const course = courses.classes.find(
         (course) => course.classId === params.course
     );
