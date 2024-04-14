@@ -5,7 +5,6 @@ export default function Page({ params }) {
     const course = courses.classes.find(
         (course) => course.classId === params.course
     );
-    console.log();
 
     return <LessonPlans course={course.class} posts={course.lessons} />;
 }
