@@ -1,21 +1,66 @@
-**Part 3: Class Inheritance and Method Overriding (25 minutes)**
+### Part 3: Class Inheritance and Method Overriding
 
--   **Concept Explanation:** Discussion on the principles of inheritance and method overriding in Python.
--   **Live Coding Example:**
+#### **Understanding Class Inheritance**
 
-    ```python
-    class Animal:
-        def speak(self):
-            return "Some sound"
+Inheritance is a fundamental concept in object-oriented programming that allows one class to inherit the attributes and methods from another. It facilitates code reuse and the creation of hierarchical relationships within the code. In Python, inheritance comes into play when a class (known as the child or subclass) derives from another class (the parent or superclass).
 
-    class Dog(Animal):
-        def speak(self):
-            return "Woof!"
+#### **Why Use Inheritance?**
 
-    generic_animal = Animal()
-    fido = Dog()
-    print(generic_animal.speak())  # Outputs: Some sound
-    print(fido.speak())            # Outputs: Woof!
-    ```
+-   **Reusability:** Instead of writing new code, you can extend the functionalities of existing classes.
+-   **Simplicity:** Manage and modify existing code easily.
+-   **Extensibility:** Add more features to a class without modifying it.
+-   **Hierarchy:** Natural and logical organization of classes.
 
--   **Exercise:** Students create subclasses from a base class Animal, such as Cat, that overrides speak method to return "Meow" and adds a new method `purr()`.
+#### **Method Overriding**
+
+Method overriding is a very useful feature of inheritance where the subclass provides a specific implementation of a method that is already defined in its superclass. This is useful when the method inherited from the superclass doesn’t quite fit the subclass's purpose.
+
+#### **Live Coding Example: Animal Hierarchy**
+
+Let’s illustrate these concepts with a simple example involving animals:
+
+```python
+class Animal:
+    def speak(self):
+        return "Some sound"
+
+class Dog(Animal):
+    def speak(self):
+        return "Woof!"
+
+generic_animal = Animal()
+fido = Dog()
+print(generic_animal.speak())  # Outputs: Some sound
+print(fido.speak())            # Outputs: Woof!
+```
+
+In this example:
+
+-   The `Animal` class has a method `speak()` that returns a general sound.
+-   The `Dog` class, which inherits from `Animal`, overrides the `speak()` method to make a sound specific to dogs.
+
+#### **Exercise: Extending the Animal Class**
+
+Now, let's expand this hierarchy by adding more functionality:
+
+-   **Task:** Create a `Cat` class that inherits from `Animal`. Override the `speak` method to return "Meow" and add a new method `purr()` that returns "Purr...".
+
+Here’s how you might implement this:
+
+```python
+class Cat(Animal):
+    def speak(self):
+        return "Meow"
+
+    def purr(self):
+        return "Purr..."
+
+# Creating an instance of Cat
+whiskers = Cat()
+print(whiskers.speak())  # Outputs: Meow
+print(whiskers.purr())   # Outputs: Purr...
+```
+
+#### **Challenge Yourself**
+
+Try to further extend this exercise by creating additional subclasses for different types of animals, each with unique behaviors. For instance, a `Bird` class that overrides `speak` to say "Tweet" and adds a `fly` method.

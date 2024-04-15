@@ -1,26 +1,66 @@
-**Part 2: Magic Methods (30 minutes)**
+### Part 2: Magic Methods
 
--   **Concept Explanation:** Explanation of magic methods like `__init__`, `__str__`, `__repr__`, `__len__`, and `__add__`.
--   **Live Coding Example:**
+#### **What Are Magic Methods?**
 
-    ```python
-    class Polynomial:
-        def __init__(self, *coefficients):
-            self.coefficients = coefficients  # tuple
+Magic methods in Python are special methods which have double underscores at the beginning and the end of their names. They are used to emulate the behavior of built-in types and to implement operator overloading. These methods allow custom classes to behave like native Python objects. Understanding and using these methods can greatly enhance your class designs.
 
-        def __repr__(self):
-            return "Polynomial" + str(self.coefficients)
+#### **Common Magic Methods**
 
-        def __add__(self, other):
-            return Polynomial(*(x + y for x, y in zip(self.coefficients, other.coefficients)))
+Here are a few commonly used magic methods:
 
-        def __call__(self, x):
-            return sum(coef * x**i for i, coef in enumerate(self.coefficients))
+-   `__init__(self, ...)`: The constructor method for a class.
+-   `__str__(self)`: Returns a user-friendly string representation of the object, which is used by the print() function and str().
+-   `__repr__(self)`: Returns an unambiguous string representation of the object which can be used to reproduce the object; often used for debugging.
+-   `__len__(self)`: Returns the length of the container. Called by the len() function.
+-   `__add__(self, other)`: Allows definition of behavior for the addition operator `+`.
+-   `__call__(self, *args, **kwargs)`: Allows an instance of a class to be called as a function.
 
-    p1 = Polynomial(1, 2, 3)
-    p2 = Polynomial(3, 4, 3)
-    print(p1 + p2)  # Polynomial(4, 6, 6)
-    print(p1(2))    # evaluates polynomial at x=2
-    ```
+#### **Live Coding Example: Polynomial Class**
 
--   **Exercise:** Students modify the Polynomial class by adding methods like `__sub__` to subtract two polynomials.
+Let's consider a `Polynomial` class to demonstrate how these magic methods can be effectively used:
+
+```python
+class Polynomial:
+    def __init__(self, *coefficients):
+        self.coefficients = coefficients  # tuple
+
+    def __repr__(self):
+        return "Polynomial" + str(self.coefficients)
+
+    def __add__(self, other):
+        return Polynomial(*(x + y for x, y in zip(self.coefficients, other.coefficients)))
+
+    def __call__(self, x):
+        return sum(coef * x**i for i, coef in enumerate(self.coefficients))
+
+p1 = Polynomial(1, 2, 3)
+p2 = Polynomial(3, 4, 3)
+print(p1 + p2)  # Outputs: Polynomial(4, 6, 6)
+print(p1(2))    # Outputs: 5 (1*2^0 + 2*2^1 + 3*2^2)
+```
+
+In this example, we use:
+
+-   `__init__` to initialize the polynomial coefficients.
+-   `__repr__` to provide a meaningful string representation that is useful for debugging.
+-   `__add__` to define how two polynomials are added.
+-   `__call__` to evaluate the polynomial at a given value of x.
+
+#### **Exercise: Extending the Polynomial Class**
+
+Now, it's your turn to enhance the `Polynomial` class by implementing subtraction:
+
+```python
+def __sub__(self, other):
+    return Polynomial(*(x - y for x, y in zip(self.coefficients, other.coefficients)))
+```
+
+Add this method to the `Polynomial` class, and test it by creating two polynomial instances and subtracting one from the other. Here’s what you might write to test your new method:
+
+```python
+p3 = Polynomial(5, 3, 1)
+p4 = Polynomial(2, 1, 0)
+print(p3 - p4)  # Should output: Polynomial(3, 2, 1)
+```
+
+This exercise will help you understand how to implement and use magic methods to modify the behavior of custom objects to make them behave more like built-in types.
