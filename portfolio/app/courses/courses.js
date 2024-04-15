@@ -91,6 +91,16 @@ export const courses = {
                 { id: 1, lesson: ["advanced-data-structures"] },
                 { id: 2, lesson: ["file-handling-and-IO-operations"] },
                 { id: 3, lesson: ["function-programming-in-python"] },
+                {
+                    id: 4,
+                    lesson: [
+                        "object-oriented-programming",
+                        "decorators",
+                        "magic-methods",
+                        "inheritance",
+                        "OOP-recap",
+                    ],
+                },
             ],
         },
         {

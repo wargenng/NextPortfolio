@@ -1,0 +1,26 @@
+**Part 2: Magic Methods (30 minutes)**
+
+-   **Concept Explanation:** Explanation of magic methods like `__init__`, `__str__`, `__repr__`, `__len__`, and `__add__`.
+-   **Live Coding Example:**
+
+    ```python
+    class Polynomial:
+        def __init__(self, *coefficients):
+            self.coefficients = coefficients  # tuple
+
+        def __repr__(self):
+            return "Polynomial" + str(self.coefficients)
+
+        def __add__(self, other):
+            return Polynomial(*(x + y for x, y in zip(self.coefficients, other.coefficients)))
+
+        def __call__(self, x):
+            return sum(coef * x**i for i, coef in enumerate(self.coefficients))
+
+    p1 = Polynomial(1, 2, 3)
+    p2 = Polynomial(3, 4, 3)
+    print(p1 + p2)  # Polynomial(4, 6, 6)
+    print(p1(2))    # evaluates polynomial at x=2
+    ```
+
+-   **Exercise:** Students modify the Polynomial class by adding methods like `__sub__` to subtract two polynomials.

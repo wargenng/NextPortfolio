@@ -6,16 +6,12 @@ import Pagi from "../../components/pagination";
 import Prism from "prismjs";
 import { useEffect } from "react";
 
-require("prismjs/components/prism-javascript");
-
-require("prismjs/components/prism-css");
-
-require("prismjs/components/prism-jsx");
+import rehypeHighlight from "rehype-highlight";
+import { compile } from "@mdx-js/mdx";
 
 export default async function Page({ params }) {
     useEffect(() => {
-        console.log("IN HEWRE");
-        Prism.highlightAll();
+        console.log();
     }, []);
 
     const course = courses.classes.find(
@@ -36,6 +32,8 @@ export default async function Page({ params }) {
             ssr: false,
         }
     );
+
+    console.log(Post);
     const currentLesson =
         course.lessons[findIndexOfLesson(course.lessons, params.post)];
     const currentPage = currentLesson.lesson.indexOf(params.post);

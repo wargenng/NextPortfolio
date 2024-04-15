@@ -1,0 +1,21 @@
+**Part 3: Class Inheritance and Method Overriding (25 minutes)**
+
+-   **Concept Explanation:** Discussion on the principles of inheritance and method overriding in Python.
+-   **Live Coding Example:**
+
+    ```python
+    class Animal:
+        def speak(self):
+            return "Some sound"
+
+    class Dog(Animal):
+        def speak(self):
+            return "Woof!"
+
+    generic_animal = Animal()
+    fido = Dog()
+    print(generic_animal.speak())  # Outputs: Some sound
+    print(fido.speak())            # Outputs: Woof!
+    ```
+
+-   **Exercise:** Students create subclasses from a base class Animal, such as Cat, that overrides speak method to return "Meow" and adds a new method `purr()`.
