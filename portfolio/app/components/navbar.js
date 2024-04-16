@@ -14,11 +14,14 @@ export default function NavBar() {
             <div className="grow"></div>
             <NavigationMenu>
                 <NavigationMenuList>
-                    <Link href="/courses" className="px-2">
+                    <Link href="/courses" className="pr-2">
                         <NavigationMenuItem>Courses</NavigationMenuItem>
                     </Link>
-                    <a href="https://github.com/wargenng">
+                    <a href="https://github.com/wargenng" className="pr-2">
                         <NavigationMenuItem>GitHub</NavigationMenuItem>
+                    </a>
+                    <a href="/resume.pdf">
+                        <NavigationMenuItem>Resume</NavigationMenuItem>
                     </a>
                 </NavigationMenuList>
             </NavigationMenu>

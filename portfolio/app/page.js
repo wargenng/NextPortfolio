@@ -10,7 +10,7 @@ export default function Home() {
             </h1>
             <Profile />
             <h2 className="text-center text-lg text-slate-500 py-3">
-                Game Developer, Data Analyst
+                Software Developer, Data Analyst
             </h2>
             <div className="prose flex flex-col p-6">
                 <About />
