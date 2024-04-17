@@ -6,10 +6,6 @@ import { VscChevronLeft, VscChevronRight } from "react-icons/vsc";
 
 export default function Pagi(props) {
     const path = usePathname().split("/").slice(0, -1).join("/") + "/";
-    console.log(path);
-    console.log(props.lesson);
-    console.log(props.page);
-
     const previousPath =
         props.page === 0 ? path : path + props.lesson[props.page - 1];
     const previousName =
@@ -27,7 +23,7 @@ export default function Pagi(props) {
 
     return (
         <div className="w-full flex py-5">
-            <Link href={previousPath}>
+            <Link href={previousPath} className="w-1/3">
                 <div className="flex justify-center items-center">
                     <VscChevronLeft />
                     <p className="pl-2">{previousName}</p>
@@ -35,7 +31,7 @@ export default function Pagi(props) {
             </Link>
 
             <div className="grow" />
-            <Link href={nextPath}>
+            <Link href={nextPath} className="w-1/3">
                 <div className="flex justify-center items-center">
                     <p className="pr-2">{nextName}</p>
                     <VscChevronRight />

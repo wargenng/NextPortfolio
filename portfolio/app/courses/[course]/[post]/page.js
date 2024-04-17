@@ -33,7 +33,6 @@ export default async function Page({ params }) {
         }
     );
 
-    console.log(Post);
     const currentLesson =
         course.lessons[findIndexOfLesson(course.lessons, params.post)];
     const currentPage = currentLesson.lesson.indexOf(params.post);
