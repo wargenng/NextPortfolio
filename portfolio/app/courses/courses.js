@@ -65,7 +65,27 @@ export const courses = {
             startTime: "1630",
             sessions: 8,
             studentCount: 15,
-            lessons: [{ id: 1, lesson: ["introduction-to-python"] }],
+            lessons: [
+                {
+                    id: 1,
+                    lesson: [
+                        "welcome-intro-to-python",
+                        "introduction-to-python",
+                    ],
+                },
+                {
+                    id: 2,
+                    lesson: [
+                        "intro-to-data-types",
+                        "overview-of-data-types",
+                        "integers-and-floats",
+                        "strings",
+                        "booleans-and-operations",
+                        "arithmetic",
+                        "data-types-recap",
+                    ],
+                },
+            ],
         },
         {
             class: "Using Chat-GPT for Students & Young Professionals",
