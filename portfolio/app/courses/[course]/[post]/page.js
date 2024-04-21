@@ -1,14 +1,25 @@
 import dynamic from "next/dynamic";
 import { courses } from "../../courses";
 import Pagi from "../../components/pagination";
-import Prism from "prismjs";
 
-import rehypeHighlight from "rehype-highlight";
-import { compile } from "@mdx-js/mdx";
+export async function generateStaticParams() {
+    const classes = courses.classes;
+    const classLessonParams = classes.map((course) => {
+        return course.lessons.map((lesson) => {
+            return lesson.lesson.map((post) => {
+                return {
+                    course: course.classId,
+                    post,
+                };
+            });
+        });
+    });
+    return classLessonParams.flat(2);
+}
 
 export default async function Page({ params }) {
     const course = courses.classes.find(
-        (course) => course.classId === params.course
+        (course) => course.classId === params.course,
     );
 
     function findIndexOfLesson(data, lessonName) {
@@ -22,8 +33,8 @@ export default async function Page({ params }) {
     const Post = dynamic(
         () => import(`./${course.subject}/${params.post}.mdx`),
         {
-            ssr: false,
-        }
+            ssr: true,
+        },
     );
 
     const currentLesson =
