@@ -1,19 +1,12 @@
-"use client";
-
 import dynamic from "next/dynamic";
 import { courses } from "../../courses";
 import Pagi from "../../components/pagination";
 import Prism from "prismjs";
-import { useEffect } from "react";
 
 import rehypeHighlight from "rehype-highlight";
 import { compile } from "@mdx-js/mdx";
 
 export default async function Page({ params }) {
-    useEffect(() => {
-        console.log();
-    }, []);
-
     const course = courses.classes.find(
         (course) => course.classId === params.course
     );
