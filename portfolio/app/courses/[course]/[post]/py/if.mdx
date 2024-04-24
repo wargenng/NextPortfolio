@@ -1,0 +1,79 @@
+## `if` Statement
+
+**Objective**: Understand and apply the `if` statement to control the flow of Python programs based on conditions.
+
+**Detailed Explanation**:
+
+1. **Syntax of `if` Statement**:
+   The syntax for an `if` statement in Python is quite simple and follows this pattern:
+
+    ```python
+    if condition:
+        action
+    ```
+
+    - `condition`: This must be an expression that evaluates to `True` or `False` (a Boolean value).
+    - `action`: This is a block of code that is executed if the condition is `True`. It will be skipped if the condition is `False`.
+
+2. **Understanding Conditions**:
+
+    - Conditions are typically comparison or logical expressions that result in a Boolean value.
+    - Common comparison operators used in conditions include:
+        - `>` (greater than)
+        - `<` (less than)
+        - `==` (equal to)
+        - `>=` (greater than or equal to)
+        - `<=` (less than or equal to)
+        - `!=` (not equal to)
+    - Example: `a > b`, `age >= 18`, `score == 100`
+
+3. **Example Code Explained**:
+   Here is a simple program that uses an `if` statement to check a user's age:
+
+    ```python
+    age = int(input("Enter your age: "))  # This line gets the user's age and converts it to an integer
+    if age >= 18:                         # This line checks if the age is 18 or older
+        print("You are an adult.")        # This line executes if the above condition is true
+    ```
+
+    In this example:
+
+    - The `condition` is `age >= 18`.
+    - The `action` is `print("You are an adult.")`.
+
+4. **Activity with Extended Example**:
+
+    - **Task**: Modify the given example to include an additional check to see if the age is less than 18 and print "You are a minor."
+    - **Modified Code**:
+        ```python
+        age = int(input("Enter your age: "))
+        if age >= 18:
+            print("You are an adult.")
+        else:
+            print("You are a minor.")
+        ```
+    - **Explanation**:
+        - The `else` block executes when the `if` condition (`age >= 18`) is false. This is an extension of the basic `if` statement and is useful when you want to execute a different action when the condition is not met.
+
+5. **Further Examples for Practice**:
+    - **Example 1**: Check if a number is positive, negative, or zero.
+        ```python
+        number = float(input("Enter a number: "))
+        if number > 0:
+            print("The number is positive.")
+        elif number < 0:
+            print("The number is negative.")
+        else:
+            print("The number is zero.")
+        ```
+    - **Example 2**: Determine if a user's input is a vowel or consonant.
+        ```python
+        char = input("Enter a character: ").lower()  # Convert to lowercase to simplify the condition
+        if char in 'aeiou':
+            print(f"{char} is a vowel.")
+        else:
+            print(f"{char} is a consonant.")
+        ```
+
+**Conclusion**:
+The `if` statement is a powerful tool in Python that lets you control the flow of your program based on conditions. Understanding how to use it effectively is essential for making decisions in your code and responding to different scenarios and inputs. These extended examples and detailed explanations should help deepen students' understanding of conditional logic in programming.

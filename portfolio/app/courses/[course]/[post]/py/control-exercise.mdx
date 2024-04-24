@@ -1,0 +1,57 @@
+# Practical Exercise: Driving License Eligibility Program
+
+**Objective**: Utilize Python conditional statements to determine if a user qualifies for a full or provisional driving license.
+
+**Exercise Setup and Guidance**:
+
+1. **Exercise Description**:
+
+    - Students will create a Python program that requests the user's age and years of driving experience.
+    - The program will assess whether the user is eligible for a full driving license, a provisional license, or if they are ineligible based on the given criteria.
+
+2. **Requirements**:
+
+    - **Full License**: 18 years or older with at least 2 years of driving experience.
+    - **Provisional License**: 18 years or older with less than 2 years of driving experience.
+    - **Ineligible**: Under 18 years old.
+
+3. **Implementing the Program**:
+
+    **Setup the Program**:
+
+    - Students should begin by setting up their Python environment and creating a new script file.
+    - Prompt students to write code for inputting the user’s age and driving experience:
+        ```python
+        age = int(input("Enter your age: "))
+        driving_experience = int(input("Enter your years of driving experience: "))
+        ```
+
+    **Conditional Logic**:
+
+    - Guide students through crafting the conditional statements needed to evaluate the eligibility:
+        ```python
+        if age < 18:
+            print("You are ineligible for a driving license.")
+        else:
+            if driving_experience >= 2:
+                print("You qualify for a full driving license.")
+            else:
+                print("You qualify for a provisional driving license.")
+        ```
+    - Explain the use of nested `if` statements and the logic behind each decision path.
+
+    **Test and Debug**:
+
+    - Encourage students to test the program with various inputs to see different outcomes.
+    - Highlight the importance of checking edge cases, such as exactly 18 years old or exactly 2 years of driving experience.
+    - Assist students with debugging issues and answer any queries they might have.
+
+4. **Additional Guidance**:
+
+    - **Code Readability**: Emphasize the importance of using clear variable names and maintaining proper indentation to enhance code readability.
+    - **Input Validation**: Discuss how to implement basic input validation to ensure that the inputs are logical (e.g., age and experience should not be negative).
+    - **Further Development**: Encourage students to think about how they might expand the program, such as by adding more detailed user feedback or handling additional complex scenarios.
+
+5. **Review and Discuss**:
+    - Conclude the exercise by reviewing several students' codes, discussing the strengths and areas for improvement.
+    - Summarize the key lessons from the exercise and how these programming skills translate to practical applications.

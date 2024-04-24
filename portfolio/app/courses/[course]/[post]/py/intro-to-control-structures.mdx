@@ -1,0 +1,52 @@
+### Week 3: Control Structures - Conditional Statements
+
+**Objective**: Learn to control the flow of Python programs using conditional statements.
+
+---
+
+### Overview of Conditional Statements
+
+**Objective**: Introduce students to the concept of conditional statements and explain their significance in programming.
+
+**Detailed Explanation**:
+
+**What are Conditional Statements?**
+Conditional statements are a type of control structure that allow a program to execute different pieces of code based on whether a certain condition is true or false. Essentially, these statements help a program make decisions, hence they are often referred to as decision-making structures.
+
+**Why are Conditional Statements Important in Programming?**
+
+-   **Decision Making**: At the heart of every useful program is decision making. Whether it's calculating a user's input, responding to data received from an API, or handling user navigation in an app, programs frequently need to choose between different actions. Conditional statements provide the mechanism to make these choices.
+-   **Flow Control**: They help in directing the flow of execution of a program. Depending on the user input or external data, the flow of the program can change dynamically with the help of conditional statements.
+-   **Handling Complexity**: As programs get more complex, the number of conditions that need to be checked increases. Conditional statements help manage this complexity by allowing the program to react differently under different conditions.
+-   **Improving User Experience**: By responding differently to different inputs or situations, conditional statements can tailor the behavior of a program to better suit user needs or expectations.
+
+**Key Points in Detail**:
+
+1. **The Basic Structure**: The simplest form of a conditional statement in Python involves an `if` statement. The syntax is straightforward:
+
+    ```python
+    if condition:
+        action
+    ```
+
+    - `condition`: This is a boolean expression that evaluates to either `True` or `False`.
+    - `action`: This is the code that is executed if the condition is `True`. If the condition is `False`, the action is skipped.
+
+2. **Example**: Consider a basic application where a user inputs their age, and the program decides if they are eligible to vote.
+
+    ```python
+    age = int(input("Enter your age: "))
+    if age >= 18:
+        print("You are eligible to vote.")
+    ```
+
+    In this example:
+
+    - The `condition` is `age >= 18`.
+    - The `action` is `print("You are eligible to vote.")`.
+    - If the user's age is 18 or more, the print statement executes. If not, the program does nothing further with this input.
+
+3. **Real-World Applications**:
+    - **E-commerce applications**: Adjusting shipping costs based on the location of the buyer.
+    - **Video games**: Changing game behavior based on player actions.
+    - **Web development**: Displaying different web pages or content based on user login status.

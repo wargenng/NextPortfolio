@@ -1,0 +1,97 @@
+## Nested Conditional Statements
+
+**Objective**: Understand how to create and effectively use nested conditional statements in Python for more complex decision-making.
+
+**Detailed Explanation**:
+
+1. **What Does "Nesting" Mean?**:
+
+    - **Definition**: Nesting in programming refers to placing one or more conditional statements inside another. This allows the execution of certain code only after previous conditions have been met.
+    - **Purpose**: Nested conditionals are crucial for handling scenarios where decisions depend on multiple layers of conditions.
+
+2. **Maintaining Readability**:
+
+    - **Challenges**: Deeply nested code can become hard to read and maintain. Each level of nesting adds complexity.
+    - **Best Practices**: Limit the depth of nesting where possible. Use clear and descriptive variable names, and consider using comments or breaking complex nested blocks into separate functions.
+
+3. **Example Code Explained**:
+   The given example shows how nested `if` statements work to determine if someone can vote based on age and registration status:
+
+    ```python
+    age = int(input("Enter your age: "))
+    registered = input("Are you registered to vote? (yes/no): ")
+
+    if age >= 18:
+        if registered.lower() == "yes":
+            print("You can vote.")
+        else:
+            print("Please register to vote.")
+    else:
+        print("You are not eligible to vote yet.")
+    ```
+
+    - **First Condition**: Checks if the age is 18 or older.
+    - **Nested Condition**: If the age condition is met, it then checks if the person is registered to vote.
+
+4. **Additional Examples**:
+
+    **Example 1: School Admission Based on Age and Grade**
+
+    - **Scenario**: Determine if a child can be admitted to a school based on their age and the grade they are applying for.
+
+    ```python
+    age = int(input("Enter the child's age: "))
+    grade = int(input("Enter the grade the child is applying for (1-12): "))
+
+    if age >= 5:
+        if grade == 1:
+            print("Welcome to Grade 1!")
+        elif grade > 1 and age >= 6 + (grade - 2):
+            print(f"Welcome to Grade {grade}!")
+        else:
+            print("The child does not meet the age requirement for this grade.")
+    else:
+        print("The child is too young for elementary school.")
+    ```
+
+    **Example 2: Product Discount Based on Membership and Purchase Amount**
+
+    - **Scenario**: Apply a discount based on whether the customer is a premium member and the amount of money they have spent.
+
+    ```python
+    is_member = input("Are you a premium member? (yes/no): ").lower()
+    purchase_amount = float(input("Enter the purchase amount: $"))
+
+    if is_member == "yes":
+        if purchase_amount >= 100:
+            print("You get a 20% discount!")
+        else:
+            print("You get a 10% discount!")
+    else:
+        if purchase_amount >= 100:
+            print("You get a 5% discount!")
+        else:
+            print("No discount available for purchases under $100.")
+    ```
+
+5. **Activity**:
+
+    - **Objective**: Create a nested condition to handle a user login scenario.
+    - **Task Description**: Ask students to write a Python script that checks a username and password. If the username is correct, check the password.
+    - **Suggested Solution**:
+
+    ```python
+    username = input("Enter your username: ")
+    password = input("Enter your password: ")
+
+    if username == "user123":
+        if password == "securepass":
+            print("Login successful!")
+        else:
+            print("Incorrect password!")
+    else:
+        print("Username not found.")
+    ```
+
+**Conclusion**:
+Using nested conditional statements effectively can allow your programs to handle complex decision-making processes. However, always aim for simplicity in your code structure to maintain readability and manageability.

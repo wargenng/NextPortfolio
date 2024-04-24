@@ -85,6 +85,16 @@ export const courses = {
                         "data-types-recap",
                     ],
                 },
+                {
+                    id: 3,
+                    lesson: [
+                        "intro-to-control-structures",
+                        "if",
+                        "else",
+                        "nested-if",
+                        "control-exercise",
+                    ],
+                },
             ],
         },
         {
