@@ -32,6 +32,7 @@ export const courses = {
                         "JavaScript-functions-exercise",
                     ],
                 },
+                { id: 3, lesson: ["data-structures-in-JavaScript"] },
             ],
         },
         {
