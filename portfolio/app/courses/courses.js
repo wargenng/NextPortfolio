@@ -33,6 +33,7 @@ export const courses = {
                     ],
                 },
                 { id: 3, lesson: ["data-structures-in-JavaScript"] },
+                { id: 4, lesson: ["document-object-model-manipulation"] },
             ],
         },
         {

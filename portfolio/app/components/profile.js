@@ -4,12 +4,9 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 export default function Profile() {
-    const [profile, setProfile] = useState(0);
-
-    useEffect(() => {
-        const savedValue = localStorage.getItem("profile");
-        setProfile(savedValue ? savedValue : 0);
-    }, []);
+    const [profile, setProfile] = useState(
+        localStorage.getItem("profile") || 1
+    );
 
     useEffect(() => {
         localStorage.setItem("profile", profile);
