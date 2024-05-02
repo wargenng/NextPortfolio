@@ -37,6 +37,22 @@ export const courses = {
             ],
         },
         {
+            class: "Build A Website Using JavaScript",
+            classType: "Introduction",
+            classId: "04186H",
+            subject: "js",
+            startDate: "2024-05-02",
+            startTime: "1630",
+            sessions: 4,
+            studentCount: 6,
+            lessons: [
+                {
+                    id: 1,
+                    lesson: ["welcome-to-build-a-website-using-JavaScript"],
+                },
+            ],
+        },
+        {
             class: "Introduction to JavaScript",
             classType: "Introduction",
             classId: "031612A",
