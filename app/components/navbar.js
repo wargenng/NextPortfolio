@@ -15,7 +15,7 @@ export default function NavBar() {
             <NavigationMenu>
                 <NavigationMenuList>
                     <Link href="/courses" className="pr-2">
-                        <NavigationMenuItem>Courses</NavigationMenuItem>
+                        <NavigationMenuItem>Tutoring</NavigationMenuItem>
                     </Link>
                     <a href="https://github.com/wargenng" className="pr-2">
                         <NavigationMenuItem>GitHub</NavigationMenuItem>
