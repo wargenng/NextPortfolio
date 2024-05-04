@@ -22,18 +22,18 @@ export default function Pagi(props) {
             : capitalizeFirstLetter(props.lesson[props.page + 1]);
 
     return (
-        <div className="w-full flex py-5">
-            <Link href={previousPath} className="w-1/3">
+        <div className="w-full flex text-sm">
+            <Link href={previousPath} className="">
                 <div className="flex justify-center items-center">
                     <VscChevronLeft />
-                    <p className="pl-2">{previousName}</p>
+                    <p className="pl-2">{truncateString(previousName, 15)}</p>
                 </div>
             </Link>
 
             <div className="grow" />
-            <Link href={nextPath} className="w-1/3">
+            <Link href={nextPath} className="">
                 <div className="flex justify-center items-center">
-                    <p className="pr-2">{nextName}</p>
+                    <p className="pr-2">{truncateString(nextName, 15)}</p>
                     <VscChevronRight />
                 </div>
             </Link>
@@ -46,4 +46,11 @@ export function capitalizeFirstLetter(str) {
         .split("-")
         .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
         .join(" ");
+}
+
+function truncateString(str, maxLength) {
+    if (str.length > maxLength) {
+        return str.substring(0, maxLength) + "...";
+    }
+    return str;
 }

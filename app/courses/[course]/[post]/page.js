@@ -19,7 +19,7 @@ export async function generateStaticParams() {
 
 export default async function Page({ params }) {
     const course = courses.classes.find(
-        (course) => course.classId === params.course,
+        (course) => course.classId === params.course
     );
 
     function findIndexOfLesson(data, lessonName) {
@@ -34,7 +34,7 @@ export default async function Page({ params }) {
         () => import(`./${course.subject}/${params.post}.mdx`),
         {
             ssr: true,
-        },
+        }
     );
 
     const currentLesson =

@@ -15,6 +15,7 @@ export default function Page({ params }) {
             courseID={params.course}
             course={course.class}
             posts={course.lessons}
+            description={course.description}
         />
     );
 }
