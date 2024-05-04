@@ -10,7 +10,7 @@ import {
 export default function NavBar() {
     return (
         <div className="w-full p-4 text-lg flex text-primary">
-            <Link href="/">woreg.in</Link>
+            <Link href="/">wargen guittap</Link>
             <div className="grow"></div>
             <NavigationMenu>
                 <NavigationMenuList>
