@@ -35,6 +35,8 @@ export const courses = {
                 { id: 3, lesson: ["data-structures-in-JavaScript"] },
                 { id: 4, lesson: ["document-object-model-manipulation"] },
             ],
+            description:
+                "JavaScript is arguably the coding language in highest demand, and in this class students will build proficiency with all things JS. From the basic control functions such as loops and switch statements through DOM manipulation and JavaScript libraries, this class will provide a thorough overview of this versatile language and its vast ecosystem. Whether you’re looking to pursue a career in front-end or back-end programming or just want to better understand how JavaScript works, this class will provide the foundation you need.",
         },
         {
             class: "Build A Website Using JavaScript",
@@ -51,6 +53,8 @@ export const courses = {
                     lesson: ["welcome-to-build-a-website-using-JavaScript"],
                 },
             ],
+            description:
+                "What does it take to build a website? In this class, students will find out! Using the JavaScript language and elements of UX design, students will design and build their own websites and learn how web developers envision, code, and test their pages. By the end of this six-session class, each student will have a working webpage, new coding skills, and an understanding of the decisions and factors that go into building a functional site that users want to visit.",
         },
         {
             class: "Introduction to JavaScript",
@@ -73,6 +77,8 @@ export const courses = {
                 { id: 4, lesson: ["document-object-model-manipulation"] },
                 { id: 5, lesson: ["introduction-to-asynchronous-JavaScript"] },
             ],
+            description:
+                "JavaScript is arguably the coding language in highest demand, and in this class students will build proficiency with all things JS. From the basic control functions such as loops and switch statements through DOM manipulation and JavaScript libraries, this class will provide a thorough overview of this versatile language and its vast ecosystem. Whether you’re looking to pursue a career in front-end or back-end programming or just want to better understand how JavaScript works, this class will provide the foundation you need.",
         },
         {
             class: "Introduction to Python for Adults",
@@ -114,6 +120,29 @@ export const courses = {
                     ],
                 },
             ],
+            description:
+                "Coding is becoming an increasingly important skill for working professionals today, and Python is an incredibly flexible and useful language to know, so why wait to learn? Join a small group of peers and an expert instructor for an engaging introduction to Python! Throughout this 8-session course, students will learn the fundamentals of coding in Python and develop an understanding of the process and skills necessary to effectively write programs as a means of problem solving. This class is ideal for adult learners who are either new to coding or have prior experience but need a refresher.",
+        },
+        {
+            class: "Introduction to Python for Adults",
+            classType: "Introduction",
+            classId: "050410A",
+            subject: "py",
+            startDate: "2024-05-04",
+            startTime: "800",
+            sessions: 8,
+            studentCount: 15,
+            lessons: [
+                {
+                    id: 1,
+                    lesson: [
+                        "welcome-intro-to-python",
+                        "introduction-to-python",
+                    ],
+                },
+            ],
+            description:
+                "Coding is becoming an increasingly important skill for working professionals today, and Python is an incredibly flexible and useful language to know, so why wait to learn? Join a small group of peers and an expert instructor for an engaging introduction to Python! Throughout this 8-session course, students will learn the fundamentals of coding in Python and develop an understanding of the process and skills necessary to effectively write programs as a means of problem solving. This class is ideal for adult learners who are either new to coding or have prior experience but need a refresher.",
         },
         {
             class: "Using Chat-GPT for Students & Young Professionals",
@@ -125,6 +154,8 @@ export const courses = {
             sessions: 3,
             studentCount: 7,
             lessons: [{ id: 1, lesson: ["introduction-to-AI-and-Chat-GPT"] }],
+            description:
+                "Artificial Intelligence is changing the world around us, and this dynamic 6-week course is designed to help college students and young professionals leverage AI, and specifically Chat-GPT, to their advantage. In this once-per-week class, learners will gain a deep understanding of the Chat-GPT technology, its applications, and how it can be integrated into their academic and professional lives. With a focus on practical skills and hands-on experience, the course will empower learners to utilize Chat-GPT to optimize their work and communication, setting them up for success in a rapidly evolving world. Through a combination of interactive lectures, group discussions, and engaging activities, students will explore the fundamentals of Chat-GPT, its underlying architecture, and the ethical considerations surrounding its use. Furthermore, participants will have the opportunity to develop and customize their own Chat-GPT applications, tailored to their unique needs and interests. By the end of the course, students will be equipped with the knowledge and tools to harness the power of Chat-GPT and stay ahead of the curve in their academic and professional pursuits.",
         },
         {
             class: "Intermediate Python for Adults",
@@ -150,6 +181,8 @@ export const courses = {
                     ],
                 },
             ],
+            description:
+                "Are you ready to take your Python skills to the next level? Intermediate Python Programming for Adults is designed for coders with a solid foundation in the Python language to build on their fundamentals and progress toward more intricate coding tasks and projects. Over 8 weeks, students will focus on applying core Python principles to more advanced tasks and applications, and delve into more advanced Python skills to broaden their abilities within the language. Not sure if Intermediate Python is right for you? If you’ve coded in Python previously, have extensive experience with a related language, or have taken the Introduction to Python for Adults course, you should feel comfortable in this class. If you’re new to Python, consider registering for Introduction to Python to build a foundation.",
         },
         {
             class: "Javascript Coding Academy",
@@ -171,6 +204,8 @@ export const courses = {
                 { id: 3, lesson: ["data-structures-in-JavaScript"] },
                 { id: 4, lesson: ["document-object-model-manipulation"] },
             ],
+            description:
+                "Javascript is one of the most common and most versatile programming languages used by web developers. It’s integral to both frontend and backend web development, and serves as a gateway to more-complex languages used in a variety of applications. So what better way for young coders to learn programming and build a valuable skillset than with a Javascript coding course? These classes match small groups of programmers with expert instructors to get hands-on Javascript experience and build working programs and games. Each month covers a new theme, making it easy for beginners to jump in at any time and for repeat students to develop a full Javascript toolkit.",
         },
         {
             class: "Javascript Coding Academy",
@@ -192,6 +227,8 @@ export const courses = {
                 { id: 3, lesson: ["data-structures-in-JavaScript"] },
                 { id: 4, lesson: ["document-object-model-manipulation"] },
             ],
+            description:
+                "Javascript is one of the most common and most versatile programming languages used by web developers. It’s integral to both frontend and backend web development, and serves as a gateway to more-complex languages used in a variety of applications. So what better way for young coders to learn programming and build a valuable skillset than with a Javascript coding course? These classes match small groups of programmers with expert instructors to get hands-on Javascript experience and build working programs and games. Each month covers a new theme, making it easy for beginners to jump in at any time and for repeat students to develop a full Javascript toolkit.",
         },
     ],
 };
