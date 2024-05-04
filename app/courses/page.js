@@ -7,7 +7,7 @@ import { courses } from "./courses";
 export default async function Page() {
     return (
         <div className="flex flex-col w-full h-screen p-8">
-            <h1 className="text-4xl pb-3 font-bold">Tutoring</h1>
+            <h1 className="text-5xl lg:text-8xl pb-3 font-bold">Tutoring</h1>
             <div className="grid grid-cols-1 lg:grid-cols-3">
                 {courses.classes.map((course) => (
                     <Link

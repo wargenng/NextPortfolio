@@ -9,9 +9,9 @@ export default function LessonPlans(props) {
 
     return (
         <div className="flex flex-col w-full h-screen p-8">
-            <h1 className="text-4xl pb-3 font-bold">{props.course}</h1>
+            <h1 className="text-5xl pb-3 font-bold">{props.course}</h1>
             <div className="mb-5 hidden lg:block">
-                <h1 className="font-bold mb-2">description</h1>
+                <h1 className="font-bold mb-2 text-2xl">description</h1>
                 <p>{props.description}</p>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-4 gap-4">
