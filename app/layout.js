@@ -1,4 +1,4 @@
-import { Fira_Code as FontSans } from "next/font/google";
+import { Newsreader as FontSans } from "next/font/google";
 import "./globals.css";
 
 import { cn } from "@/lib/utils";
@@ -20,11 +20,11 @@ export default function RootLayout({ children }) {
         <html lang="en">
             <body
                 className={cn(
-                    "min-h-screen bg-background font-sans antialiased flex items-start justify-center",
+                    "min-h-screen bg-background font-sans antialiased flex items-start justify-center text-primary",
                     fontSans.variable
                 )}
             >
-                <div className="flex flex-col justify-center items-center w-full lg:w-8/12">
+                <div className="flex flex-col justify-center items-center w-full lg:w-7/12">
                     <NavBar />
                     <Bread />
                     {children}
