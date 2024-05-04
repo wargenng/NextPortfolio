@@ -15,7 +15,7 @@ export default function Home() {
             <h2 className="text-center text-lg p-3 font-bold mb-5">
                 Software Engineer · Data Analyst · Tutor · Climber
             </h2>
-            <div className="prose flex flex-col w-full">
+            <div className="prose flex flex-col w-full p-3">
                 <About />
             </div>
         </div>
