@@ -1,4 +1,4 @@
-import { Newsreader as FontSans } from "next/font/google";
+import { Open_Sans as FontSans } from "next/font/google";
 import "./globals.css";
 
 import { cn } from "@/lib/utils";
@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
                     fontSans.variable
                 )}
             >
-                <div className="flex flex-col justify-center items-center w-full lg:w-7/12">
+                <div className="flex flex-col justify-center items-center w-full">
                     <NavBar />
                     <Bread />
                     {children}

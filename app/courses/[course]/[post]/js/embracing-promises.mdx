@@ -1,0 +1,22 @@
+# Embracing Promises
+
+Promises represent a significant improvement over callbacks, providing a cleaner and more manageable way to handle asynchronous operations. A promise is an object representing the eventual completion or failure of an asynchronous operation.
+
+Here’s how you can create a promise that simulates checking a user's login status:
+
+```javascript
+let userLoggedIn = true;
+
+let checkLoginStatus = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        if (userLoggedIn) resolve("User logged in");
+        else reject("User not logged in");
+    }, 1000);
+});
+
+checkLoginStatus
+    .then((message) => console.log(message))
+    .catch((error) => console.log(error));
+```
+
+This promise handles both scenarios: resolving if the user is logged in and rejecting if not.

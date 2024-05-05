@@ -1,0 +1,15 @@
+# The Role of Callbacks
+
+Callbacks are the foundation of asynchronous JavaScript. They are functions passed into other functions as arguments, which are then invoked to continue execution after the asynchronous operation completes.
+
+Consider the example of using `setTimeout`, which delays a task. In the snippet below, `setTimeout` is used to delay a greeting message by two seconds:
+
+```javascript
+function displayMessage() {
+    console.log("Hello, world!");
+}
+
+setTimeout(displayMessage, 2000);
+```
+
+However, extensive use of callbacks can lead to "callback hell," where multiple nested callbacks make the code hard to read and maintain.

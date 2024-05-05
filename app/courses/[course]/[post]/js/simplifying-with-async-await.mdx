@@ -1,0 +1,19 @@
+# Simplifying with async/await
+
+`async` and `await` further simplify working with promises, making asynchronous code look and behave more like synchronous code. Here's how you could use `async/await` to fetch data from an API:
+
+```javascript
+async function fetchData() {
+    try {
+        let response = await fetch("https://api.example.com/data");
+        let data = await response.json();
+        console.log(data);
+    } catch (error) {
+        console.error("Failed to fetch data:", error);
+    }
+}
+
+fetchData();
+```
+
+This function fetches data from an API and logs it, handling any errors that might occur during the fetch operation.

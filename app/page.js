@@ -4,11 +4,8 @@ import Profile from "./components/profile";
 
 export default function Home() {
     return (
-        <div className="flex justify-center items-center flex-col">
-            <h1
-                className="text-center text-8xl lg:text-[15rem] font-bold leading-[3.5rem]
-            hover:leading-[5.5rem] lg:leading-[8rem] lg:hover:leading-[15rem] transition-[line-height] duration-500"
-            >
+        <div className="w-full flex justify-center items-center flex-col">
+            <h1 className="text-center text-8xl lg:text-[12rem] font-bold ">
                 wargen guittap
             </h1>
             <Profile />

@@ -22,10 +22,10 @@ export default function Profile() {
     return (
         <Image
             src={`/profiles/${profile}.png`}
-            width={200}
-            height={200}
+            width={400}
+            height={400}
             alt="Picture of the author"
-            className="py-3"
+            className="py-3 lg:w-96 w-72"
             onClick={handleClick}
         />
     );

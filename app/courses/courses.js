@@ -34,6 +34,18 @@ export const courses = {
                 },
                 { id: 3, lesson: ["data-structures-in-JavaScript"] },
                 { id: 4, lesson: ["document-object-model-manipulation"] },
+                {
+                    id: 5,
+                    lesson: [
+                        "introduction-to-asynchronous-JavaScript",
+                        "understanding-async-JavaScript",
+                        "the-role-of-callbacks",
+                        "embracing-promises",
+                        "simplifying-with-async-await",
+                        "practical-application-of-async-calls",
+                        "conclusion-to-async-JavaScript",
+                    ],
+                },
             ],
             description:
                 "JavaScript is arguably the coding language in highest demand, and in this class students will build proficiency with all things JS. From the basic control functions such as loops and switch statements through DOM manipulation and JavaScript libraries, this class will provide a thorough overview of this versatile language and its vast ecosystem. Whether you’re looking to pursue a career in front-end or back-end programming or just want to better understand how JavaScript works, this class will provide the foundation you need.",

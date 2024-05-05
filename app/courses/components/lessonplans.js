@@ -16,7 +16,7 @@ export default function LessonPlans(props) {
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-4 gap-4">
                 {props.posts.map((post) => (
-                    <div key={`${props.courseID}/${post}`}>
+                    <div key={`${props.courseID}/${post.id}`}>
                         <h2 className="pb-3 text-xl text-sky-600 font-semibold">
                             Lesson {post.id}
                         </h2>
