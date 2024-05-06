@@ -13,6 +13,9 @@ const fontSans = FontSans({
 export const metadata = {
     title: "woregin",
     description: "Wargen Guittap's Portfolio",
+    icons: {
+        icon: "/white.svg",
+    },
 };
 
 export default function RootLayout({ children }) {

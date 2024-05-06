@@ -14,7 +14,9 @@ export default function NavBar() {
 
     return (
         <div className="w-full p-4 text-lg flex text-primary">
-            <Link href="/">wargen guittap</Link>
+            <Link href="/">
+                <img src="/logo.svg" className="w-8"></img>
+            </Link>
             <div className="grow"></div>
             <div className="block lg:hidden mt-1">
                 <GiHamburgerMenu onClick={handleClick} />
