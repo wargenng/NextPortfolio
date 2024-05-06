@@ -22,7 +22,7 @@ export default function NavBar() {
             {showNav ? (
                 <div className="fixed w-screen h-screen top-0 bg-background z-10">
                     <IoMdClose
-                        className="fixed right-0 m-3"
+                        className="fixed right-0 mt-3 mr-2"
                         size="2rem"
                         onClick={handleClick}
                     />
