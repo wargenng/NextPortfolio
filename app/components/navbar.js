@@ -1,30 +1,51 @@
 "use client";
 
 import Link from "next/link";
-import {
-    NavigationMenu,
-    NavigationMenuItem,
-    NavigationMenuList,
-} from "@/components/ui/navigation-menu";
+import { useState } from "react";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { IoMdClose } from "react-icons/io";
 
 export default function NavBar() {
+    const [showNav, setShowNav] = useState(false);
+
+    const handleClick = () => {
+        setShowNav(!showNav);
+    };
+
     return (
         <div className="w-full p-4 text-lg flex text-primary">
             <Link href="/">wargen guittap</Link>
             <div className="grow"></div>
-            <NavigationMenu>
-                <NavigationMenuList>
-                    <Link href="/courses" className="pr-2">
-                        <NavigationMenuItem>Tutoring</NavigationMenuItem>
-                    </Link>
-                    <a href="https://github.com/wargenng" className="pr-2">
-                        <NavigationMenuItem>GitHub</NavigationMenuItem>
-                    </a>
-                    <a href="/resume.pdf">
-                        <NavigationMenuItem>Resume</NavigationMenuItem>
-                    </a>
-                </NavigationMenuList>
-            </NavigationMenu>
+            <div className="block lg:hidden mt-1">
+                <GiHamburgerMenu onClick={handleClick} />
+            </div>
+            {showNav ? (
+                <div className="fixed w-screen h-screen top-0 bg-background">
+                    <IoMdClose
+                        className="fixed right-0 m-3"
+                        size="2rem"
+                        onClick={handleClick}
+                    />
+                    <div className="mt-12 ml-6 flex flex-col gap-y-3 text-2xl font-bold">
+                        <Link href="/courses" className="mr-4">
+                            Tutoring
+                        </Link>
+                        <a href="https://github.com/wargenng" className="mr-4">
+                            GitHub
+                        </a>
+                        <a href="/resume.pdf">Resume</a>
+                    </div>
+                </div>
+            ) : null}
+            <div className="hidden lg:block">
+                <Link href="/courses" className="mr-4">
+                    Tutoring
+                </Link>
+                <a href="https://github.com/wargenng" className="mr-4">
+                    GitHub
+                </a>
+                <a href="/resume.pdf">Resume</a>
+            </div>
         </div>
     );
 }

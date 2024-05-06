@@ -25,7 +25,7 @@ export default function Profile() {
             width={400}
             height={400}
             alt="Picture of the author"
-            className="py-3 lg:w-96 w-72"
+            className="lg:m-7 m-3 lg:w-96 w-72"
             onClick={handleClick}
         />
     );
