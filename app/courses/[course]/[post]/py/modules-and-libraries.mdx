@@ -1,0 +1,110 @@
+# Week 5: Modules and Libraries - Expanding Your Python Toolkit
+
+#### Overview
+
+Welcome to Week 5 of our Intermediate Python Programming course! This week, we'll dive into one of the most powerful features of Python—its vast ecosystem of modules and libraries. These tools can dramatically extend your programming capabilities without the need for building everything from scratch.
+
+#### Objectives
+
+-   Understand the concept of modules and how they can be imported into your Python scripts.
+-   Explore some of the most popular Python libraries and their practical applications.
+-   Learn to create and manage your own Python modules, enhancing code reusability and organization.
+
+#### Lecture and Demonstrations
+
+**1. Introduction to Modules**
+Modules in Python are simply files containing Python code that can define functions, classes, or variables. These are designed to help with module reuse, improving manageability and organization of the code.
+
+**Example:**
+Let’s say you have a file named `utilities.py` with the following code:
+
+```python
+def add(a, b):
+    return a + b
+
+def multiply(a, b):
+    return a * b
+```
+
+You can use these functions in your main program by importing the `utilities` module like so:
+
+```python
+import utilities
+
+result_add = utilities.add(3, 5)
+result_multiply = utilities.multiply(3, 5)
+
+print("Addition:", result_add)
+print("Multiplication:", result_multiply)
+```
+
+**2. Using Built-in Modules**
+Python comes with several built-in modules that you can use without installing anything extra. A common example is the `random` module, which lets you generate random numbers.
+
+**Example:**
+
+```python
+import random
+
+random_number = random.randint(1, 100)
+print("A random number between 1 and 100:", random_number)
+```
+
+**3. Exploring Third-Party Libraries**
+Next, we'll explore how third-party libraries can be used to perform tasks that would be much more complex to implement from scratch. For instance, `requests` is an HTTP library used for making requests to web servers, and `Pandas` is used for data manipulation and analysis.
+
+**Example with Requests:**
+
+```python
+import requests
+
+response = requests.get('https://api.github.com')
+print("GitHub API Status:", response.status_code)
+```
+
+**Example with Pandas:**
+
+```python
+import pandas as pd
+
+data = {'Name': ['Alice', 'Bob', 'Charlie'], 'Age': [25, 30, 35]}
+df = pd.DataFrame(data)
+
+print(df)
+```
+
+**4. Creating Your Own Modules**
+Creating your own modules can be a great way to organize your code, especially as your projects grow larger.
+
+**Example:**
+Imagine you have a file `math_operations.py` with the following function:
+
+```python
+def square(number):
+    return number ** 2
+```
+
+You can use this in your main program like this:
+
+```python
+from math_operations import square
+
+print("Square of 4 is", square(4))
+```
+
+#### Hands-On Exercises
+
+-   **Exercise 1:** Create a simple module named `calculator.py` with functions for addition, subtraction, multiplication, and division. Use this module in another script to perform calculations.
+-   **Exercise 2:** Use the `os` built-in module to list all files and directories in your current working directory.
+-   **Exercise 3:** Install the `matplotlib` library (if not already installed) and plot a simple line chart using data generated with the `random` module.
+
+#### Homework
+
+-   Write a script that imports at least three different built-in modules and uses at least one function from each.
+-   Explore a third-party library of your choice that we have not covered in class. Prepare a short example to demonstrate its use and be ready to discuss it in our next session.
+
+#### Discussion and Wrap-Up
+
+At the end of this session, we'll have a discussion about how these modules and libraries can be integrated into your current or future projects. What tasks do you think could be simplified using a library we discussed today?
+
+Stay tuned for next week, where we'll delve into the world of web scraping with Python!

@@ -1,0 +1,136 @@
+### Week 7: Mastering API Interaction with Python
+
+Welcome to Week 7 of our Intermediate Python Programming course! This week, we dive deep into one of the most powerful tools in modern programming—APIs (Application Programming Interfaces). APIs are essential for interacting with external services and data, crucial for applications ranging from web development to data science and automation.
+
+#### Definitions and Types of APIs
+
+Before we get into coding, let's define some key concepts:
+
+-   **API (Application Programming Interface):** An API is a set of rules that allows one piece of software application to interact with another. It acts as a gateway for enabling the communication between different software systems.
+
+-   **REST (Representational State Transfer) API:** REST is an architectural style that generally runs over HTTP, making it easy to use and integrate with web services. REST APIs use standard HTTP methods like GET, POST, PUT, and DELETE.
+
+-   **SOAP (Simple Object Access Protocol) API:** SOAP is a protocol specification for exchanging structured information in the implementation of web services in computer networks. SOAP relies heavily on XML, and together with schemas, defines a very strong type system.
+
+-   **GraphQL API:** A newer API standard that provides a more efficient, powerful, and flexible alternative to REST. It allows clients to request exactly the data they need and nothing more.
+
+#### When to Use Different Types of APIs
+
+1. **REST API:**
+
+    - **Usage:** Best for web services that are straightforward, stateless, and cacheable. It's not protocol-specific but most commonly uses HTTP/HTTPS.
+    - **Scenarios:** Integrating payment gateways, social media services, or providing services to third-party clients where broad compatibility is required.
+
+2. **SOAP API:**
+
+    - **Usage:** Often used in enterprise-level businesses where formal contracts between systems (required for financial transactions, telecommunication services, etc.) are needed.
+    - **Scenarios:** Situations where tighter security and transactional reliability are important. SOAP supports WS-ReliableMessaging, WS-Security.
+
+3. **GraphQL API:**
+    - **Usage:** When clients need the ability to request exactly the data they need and nothing more or less. It reduces the amount of data that needs to be transferred over the network.
+    - **Scenarios:** Mobile applications where bandwidth optimization is critical, or in complex systems where multiple resources need to be retrieved in a single request.
+
+#### Understanding APIs and REST Principles
+
+**Objective:** Introduce the concept of APIs and understand the REST architectural style.
+
+APIs allow your programs to interact with other software or servers, acting as a gateway for different systems to communicate. REST (Representational State Transfer) is an architectural style that is commonly used to design networked applications. It uses a stateless communication protocol, usually HTTP.
+
+When using APIs, you typically send a request over the Internet to an API endpoint. This request performs a function on a remote server, and the server sends back data as a response. REST uses straightforward HTTP methods like GET (retrieve data), POST (send new data), PUT (update existing data), and DELETE (remove data).
+
+In our next class, we will delve deeper into how you can use the `requests` library to interact with different types of APIs and handle their responses. We'll also look at specific examples using JSONPlaceholder and PokeAPI to solidify your understanding of working with REST APIs.
+
+#### Python Requests: Making API Calls
+
+**Objective:** Learn to use the Python `requests` library to send API requests and handle responses.
+
+The `requests` library is one of the simplest and most popular HTTP libraries in Python. Here's a basic example of how you can use `requests` to retrieve data from an API:
+
+```python
+import requests
+
+# Replace 'API_ENDPOINT' with the actual URL of the API endpoint
+response = requests.get('https://api.example.com/data')
+if response.status_code == 200:
+    data = response.json()  # Assuming the response is JSON
+    print("Data retrieved:", data)
+else:
+    print("Failed to retrieve data", response.status_code)
+```
+
+This code snippet sends a GET request to an API endpoint and prints the retrieved data. It also checks the response status code to handle errors appropriately.
+
+#### Handling JSON Responses and Structuring Data
+
+**Objective:** Process JSON data returned from APIs and use it effectively in Python applications.
+
+JSON (JavaScript Object Notation) is a lightweight data-interchange format that is easy for humans to read and write and easy for machines to parse and generate. Most APIs return data in JSON format, which makes it straightforward to integrate into Python scripts.
+
+Here’s an example of how you can handle a JSON response:
+
+```python
+import json
+
+# Simulating a JSON response from an API
+json_response = '{"name": "John", "age": 30, "city": "New York"}'
+
+# Parse JSON into a Python dictionary
+data = json.loads(json_response)
+print("Name:", data['name'])
+print("Age:", data['age'])
+print("City:", data['city'])
+```
+
+In this example, the JSON data is converted into a Python dictionary, making it easy to access and manipulate individual data fields.
+
+### API Usage Examples
+
+1. **Using JSONPlaceholder to Fetch User Data**
+
+    ```python
+    import requests
+
+    # API endpoint for JSONPlaceholder users
+    url = 'https://jsonplaceholder.typicode.com/users'
+
+    # Send a GET request
+    response = requests.get(url)
+    if response.status_code == 200:
+        users = response.json()
+        # Print details of each user
+        for user in users:
+            print(f"Name: {user['name']}, Email: {user['email']}, City: {user['address']['city']}")
+    else:
+        print("Failed to retrieve data", response.status_code)
+    ```
+
+2. **Using PokeAPI to Retrieve and Display Pokémon Data**
+
+    ```python
+    import requests
+
+    # API endpoint for a specific Pokémon
+    pokemon_url = 'https://pokeapi.co/api/v2/pokemon/pikachu'
+
+    # Send a GET request
+    response = requests.get(pokemon_url)
+    if response.status_code == 200:
+        pokemon_data = response.json()
+        print(f"Pokémon Name: {pokemon_data['name']}")
+        print(f"Abilities:")
+        for ability in pokemon_data['abilities']:
+            print(f"- {ability['ability']['name']}")
+    else:
+        print("Failed to retrieve data", response.status_code)
+    ```
+
+### Discussion and Hands-on Exercise
+
+**Activity:** For today's exercise, students are asked to choose one of the APIs for a small project:
+
+1. **JSONPlaceholder Project:** Fetch posts written by a specific user and display the title and body of each post.
+2. **PokeAPI Project:** Fetch and display detailed information about any three Pokémon of your choice, including their names, abilities, and types.
+
+These tasks will help students apply their learning in real-world scenarios, reinforcing how to work with API endpoints, handle JSON data, and process and display complex data structures effectively.
+
+Enjoy your exploration of these APIs, and remember, mastering their use can significantly enhance the capabilities of any programmer.

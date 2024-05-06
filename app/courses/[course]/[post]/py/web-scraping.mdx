@@ -1,0 +1,72 @@
+### Week 6: Mastering Web Scraping with Python
+
+**Duration:** 90 minutes  
+**Objective:** This week, you'll dive into the exciting world of web scraping using Python. By the end of this session, you should be able to extract data from websites, understand the basics of HTML, and know how to navigate the Document Object Model (DOM) to retrieve information programmatically.
+
+#### **Introduction to Web Scraping**
+
+Web scraping is the technique of automatically accessing and extracting large amounts of information from websites. This can be incredibly useful in various scenarios, such as gathering data for research, monitoring product prices for comparison shopping, or even fetching real-time data for analysis.
+
+However, before we proceed, it’s crucial to address the legal considerations. Always ensure that your scraping activities comply with the terms of service of the website and relevant laws like the GDPR or the CCPA.
+
+#### **Tools and Libraries**
+
+For web scraping in Python, two main libraries make our job easier: `requests` and `BeautifulSoup`.
+
+-   `requests` is used for making HTTP requests to web pages.
+-   `BeautifulSoup` is used for parsing HTML and navigating the parsed document tree.
+
+Here's how to install these libraries if you haven't already:
+
+```python
+!pip install requests beautifulsoup4
+```
+
+#### **Example Project: Scraping a Books Website**
+
+Imagine you want to extract data about books from a freely accessible website to analyze the trends in book pricing and genres. We'll use a simple example of a website structured with HTML elements, each representing different book details.
+
+**Step 1: Fetch the Web Page**
+First, we need to send a request to the website to retrieve the page content.
+
+```python
+import requests
+
+url = 'http://books.toscrape.com/'
+response = requests.get(url)
+html_content = response.text  # get the HTML content of the page
+```
+
+**Step 2: Parse the HTML Content**
+Next, we use `BeautifulSoup` to parse this HTML content.
+
+```python
+from bs4 import BeautifulSoup
+
+soup = BeautifulSoup(html_content, 'html.parser')  # parse the HTML content
+```
+
+**Step 3: Extract Data**
+Now, let’s extract the titles and prices of the books displayed on the page. Typically, each book is listed in an HTML element with specific class attributes.
+
+```python
+books = soup.find_all('article', class_='product_pod')  # find all book entries
+
+for book in books:
+    title = book.find('h3').find('a')['title']
+    price = book.find('p', class_='price_color').text
+    print(f'Title: {title}, Price: {price}')
+```
+
+#### **Discussion and Practice**
+
+In today's class, we'll also discuss how to handle challenges such as websites that load data dynamically with JavaScript and strategies to mimic human browsing behavior to avoid getting blocked by websites.
+
+**Practice Exercise:**  
+Your task is to pick a website (make sure it allows scraping), use the Python code provided, and try to extract a different kind of information, such as ratings or availability. Share your code and findings with the class.
+
+#### **Conclusion**
+
+Web scraping is a powerful tool for data gathering, and Python provides robust libraries to make this task easier. As you practice, you'll encounter various scenarios requiring different techniques to effectively gather the data you need.
+
+Remember, the key to mastering web scraping is practice and adherence to ethical and legal standards. Happy scraping!
