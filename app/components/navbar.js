@@ -20,13 +20,19 @@ export default function NavBar() {
                 <GiHamburgerMenu onClick={handleClick} />
             </div>
             {showNav ? (
-                <div className="fixed w-screen h-screen top-0 bg-background">
+                <div className="fixed w-screen h-screen top-0 bg-background z-10">
                     <IoMdClose
                         className="fixed right-0 m-3"
                         size="2rem"
                         onClick={handleClick}
                     />
-                    <div className="mt-12 ml-6 flex flex-col gap-y-3 text-2xl font-bold">
+                    <div
+                        className="mt-12 ml-6 flex flex-col gap-y-3 text-2xl font-bold"
+                        onClick={handleClick}
+                    >
+                        <Link href="/" className="mr-4">
+                            Home
+                        </Link>
                         <Link href="/courses" className="mr-4">
                             Tutoring
                         </Link>
