@@ -1,6 +1,6 @@
 import dynamic from "next/dynamic";
 import { courses } from "../../courses";
-import Pagi from "../../components/pagination";
+import Pagination from "../../components/pagination";
 
 export async function generateStaticParams() {
     const classes = courses.classes;
@@ -44,7 +44,7 @@ export default async function Page({ params }) {
     return (
         <div className="prose flex flex-col p-8 w-full h-full">
             <Post />
-            <Pagi lesson={currentLesson.lesson} page={currentPage} />
+            <Pagination lesson={currentLesson.lesson} page={currentPage} />
         </div>
     );
 }

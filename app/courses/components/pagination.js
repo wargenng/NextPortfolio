@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { VscChevronLeft, VscChevronRight } from "react-icons/vsc";
 
-export default function Pagi(props) {
+export default function Pagination(props) {
     const path = usePathname().split("/").slice(0, -1).join("/") + "/";
     const previousPath =
         props.page === 0 ? path : path + props.lesson[props.page - 1];
