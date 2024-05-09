@@ -1,0 +1,110 @@
+## Week 2: Diving Into JavaScript – Adding Interactivity to Your Web Pages
+
+Welcome to Week 2 of our journey into web development! Last week, we laid the foundation with HTML, and this week, we're going to bring those pages to life with JavaScript. By the end of this session, you'll understand how to use JavaScript to add dynamic content and respond to user events. Let's get started!
+
+### Understanding JavaScript's Role
+
+**What is JavaScript?** It's a powerful scripting language used to create dynamic content on websites. This means anything that moves, updates, or changes on your page without needing to reload it—like a popup message or a live feed—uses JavaScript.
+
+### Setting Up Your Environment
+
+First, let’s see how to incorporate JavaScript into your HTML pages. You can either embed scripts directly within your HTML using `<script>` tags or link to an external `.js` file. Here's how you link a JavaScript file:
+
+```html
+<script src="script.js"></script>
+```
+
+### JavaScript Basics
+
+#### Variables and Data Types
+
+Variables are like containers for storing data. In JavaScript, you use `let` or `const` to declare them:
+
+```javascript
+let message = "Hello, world!";
+const pi = 3.14;
+```
+
+We primarily deal with types like strings, numbers, and booleans:
+
+```javascript
+let name = "John";
+let age = 30;
+let isStudent = true;
+```
+
+#### Simple Operations
+
+You can perform operations like addition or combine variables:
+
+```javascript
+let sum = 10 + 5; // 15
+let greeting = name + " is " + age + " years old.";
+```
+
+### Functions and Event Handlers
+
+A function in JavaScript is a block of code designed to perform a specific task:
+
+```javascript
+function showMessage() {
+    alert("Hello, " + name + "!");
+}
+```
+
+And you can execute this function in response to an event, like a button click:
+
+```html
+<button onclick="showMessage()">Click me</button>
+```
+
+### Hands-On Activity: Interactive Elements
+
+Now, let's add some interactive features. We'll make a button that changes the text in a div element when clicked:
+
+```javascript
+function updateDiv() {
+    document.getElementById("myDiv").innerHTML = "Updated text!";
+}
+```
+
+```html
+<div id="myDiv">Original Text</div>
+<button onclick="updateDiv()">Change Text</button>
+```
+
+### Practical Exercise: Toggle Visibility
+
+A common feature on many websites is toggling the visibility of elements. Here's how you can hide and show a paragraph using JavaScript:
+
+```javascript
+function toggleParagraph() {
+    var p = document.getElementById("myPara");
+    if (p.style.display === "none") {
+        p.style.display = "block";
+    } else {
+        p.style.display = "none";
+    }
+}
+```
+
+```html
+<p id="myPara">This is a paragraph that will be hidden or shown.</p>
+<button onclick="toggleParagraph()">Toggle Paragraph</button>
+```
+
+### Wrapping Up
+
+As we wrap up today's session, experiment by adding different interactive elements to your pages. Try changing colors, displaying messages, or even playing sounds. JavaScript opens up a plethora of possibilities, so dive in and see what you can create!
+
+### Homework Challenge
+
+For your homework, continue to explore JavaScript by adding a feature that displays the current date and time on your page. Here’s a hint on how to start:
+
+```javascript
+function showDate() {
+    document.getElementById("date").innerHTML = new Date();
+}
+```
+
+Remember, the more you practice, the more comfortable you'll become. Happy coding!

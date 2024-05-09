@@ -64,6 +64,10 @@ export const courses = {
                     id: 1,
                     lesson: ["welcome-to-build-a-website-using-JavaScript"],
                 },
+                {
+                    id: 2,
+                    lesson: ["introducing-dynamic-web-pages-with-JavaScript"],
+                },
             ],
             description:
                 "What does it take to build a website? In this class, students will find out! Using the JavaScript language and elements of UX design, students will design and build their own websites and learn how web developers envision, code, and test their pages. By the end of this six-session class, each student will have a working webpage, new coding skills, and an understanding of the decisions and factors that go into building a functional site that users want to visit.",
