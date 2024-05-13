@@ -175,6 +175,7 @@ export const courses = {
                 { id: 5, lesson: ["modules-and-libraries"] },
                 { id: 6, lesson: ["web-scraping"] },
                 { id: 7, lesson: ["working-with-APIs"] },
+                { id: 8, lesson: ["intermidiate-wrapup"] },
             ],
             description:
                 "Are you ready to take your Python skills to the next level? Intermediate Python Programming for Adults is designed for coders with a solid foundation in the Python language to build on their fundamentals and progress toward more intricate coding tasks and projects. Over 8 weeks, students will focus on applying core Python principles to more advanced tasks and applications, and delve into more advanced Python skills to broaden their abilities within the language. Not sure if Intermediate Python is right for you? If you’ve coded in Python previously, have extensive experience with a related language, or have taken the Introduction to Python for Adults course, you should feel comfortable in this class. If you’re new to Python, consider registering for Introduction to Python to build a foundation.",
