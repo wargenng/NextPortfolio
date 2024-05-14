@@ -17,6 +17,10 @@ export const courses = {
                     lesson: [
                         "welcome-to-introduction-to-JavaScript",
                         "introduction-to-JavaScript",
+                        "role-of-JavaScript",
+                        "setting-up-development-environment",
+                        "JavaScript-basic-syntax",
+                        "write-your-first-program",
                     ],
                 },
                 {
@@ -255,7 +259,17 @@ export const courses = {
             sessions: 8,
             studentCount: 4,
             lessons: [
-                { id: 1, lesson: ["introduction-to-JavaScript"] },
+                {
+                    id: 1,
+                    lesson: [
+                        "welcome-to-introduction-to-JavaScript",
+                        "introduction-to-JavaScript",
+                        "role-of-JavaScript",
+                        "setting-up-development-environment",
+                        "JavaScript-basic-syntax",
+                        "write-your-first-program",
+                    ],
+                },
                 {
                     id: 2,
                     lesson: [
