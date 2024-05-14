@@ -51,6 +51,58 @@ export const courses = {
                 "JavaScript is arguably the coding language in highest demand, and in this class students will build proficiency with all things JS. From the basic control functions such as loops and switch statements through DOM manipulation and JavaScript libraries, this class will provide a thorough overview of this versatile language and its vast ecosystem. Whether you’re looking to pursue a career in front-end or back-end programming or just want to better understand how JavaScript works, this class will provide the foundation you need.",
         },
         {
+            class: "Introduction to JavaScript",
+            classType: "Introduction",
+            classId: "05147A",
+            subject: "js",
+            startDate: "2024-05-14",
+            startTime: "1730",
+            sessions: 8,
+            studentCount: 6,
+            lessons: [
+                {
+                    id: 1,
+                    lesson: [
+                        "welcome-to-introduction-to-JavaScript",
+                        "introduction-to-JavaScript",
+                        "role-of-JavaScript",
+                        "setting-up-development-environment",
+                        "JavaScript-basic-syntax",
+                        "write-your-first-program",
+                    ],
+                },
+                {
+                    id: 2,
+                    lesson: [
+                        "control-flow-functions-and-arrow-functions-in-JavaScript",
+                        "if-statements-in-JavaScript",
+                        "switch-statements-in-JavaScript",
+                        "for-loops-in-JavaScript",
+                        "while-loops-in-JavaScript",
+                        "functions-in-JavaScript",
+                        "arrow-functions-in-JavaScript",
+                        "JavaScript-functions-exercise",
+                    ],
+                },
+                { id: 3, lesson: ["data-structures-in-JavaScript"] },
+                { id: 4, lesson: ["document-object-model-manipulation"] },
+                {
+                    id: 5,
+                    lesson: [
+                        "introduction-to-asynchronous-JavaScript",
+                        "understanding-async-JavaScript",
+                        "the-role-of-callbacks",
+                        "embracing-promises",
+                        "simplifying-with-async-await",
+                        "practical-application-of-async-calls",
+                        "conclusion-to-async-JavaScript",
+                    ],
+                },
+            ],
+            description:
+                "JavaScript is arguably the coding language in highest demand, and in this class students will build proficiency with all things JS. From the basic control functions such as loops and switch statements through DOM manipulation and JavaScript libraries, this class will provide a thorough overview of this versatile language and its vast ecosystem. Whether you’re looking to pursue a career in front-end or back-end programming or just want to better understand how JavaScript works, this class will provide the foundation you need.",
+        },
+        {
             class: "Build A Website Using JavaScript",
             classType: "Introduction",
             classId: "04186H",

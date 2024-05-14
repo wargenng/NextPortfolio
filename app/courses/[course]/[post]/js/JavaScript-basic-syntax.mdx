@@ -1,0 +1,79 @@
+# 4. JavaScript Syntax Basics
+
+#### Variables and Constants
+
+Variables in JavaScript are used to store data values. JavaScript uses two main keywords for declaring variables: `let` and `const`.
+
+-   **`let`**: Allows you to declare a variable that can be changed later. It's block-scoped, which means it exists only within the nearest set of curly braces (`{}`).
+
+    ```javascript
+    let age = 25; // Declares a variable `age` with the initial value of 25
+    age = 26; // The value of `age` can be updated
+    ```
+
+-   **`const`**: Used to declare a constant value that cannot be changed after it is set. Like `let`, it is also block-scoped. It's a good practice to use `const` for values that you know will not need to be updated.
+
+    ```javascript
+    const PI = 3.14; // Declares a constant `PI`
+    // PI = 3.14159; // This would result in an error because `PI` is a constant
+    ```
+
+#### Data Types
+
+JavaScript variables can hold several data types: strings, numbers, booleans, arrays, objects, and more. Here's an overview:
+
+-   **String**: Represents textual data. It's surrounded by quotes—either single, double, or backticks.
+
+    ```javascript
+    let name = "Alex"; // String data type
+    ```
+
+-   **Number**: Represents both integer and floating-point numbers.
+
+    ```javascript
+    let score = 85.5; // Number data type
+    ```
+
+-   **Boolean**: Represents a logical entity and can have two values: `true` or `false`.
+
+    ```javascript
+    let isActive = true; // Boolean data type
+    ```
+
+-   **Array**: Used to store multiple values in a single variable. Arrays are zero-indexed, with the first element at index 0.
+
+    ```javascript
+    let items = ["apple", "orange", "banana"]; // Array of strings
+    ```
+
+-   **Object**: Represents instances of data that are composed of key-value pairs. Objects are one of the most important data structures in JavaScript.
+
+    ```javascript
+    let person = { firstName: "Alex", lastName: "Johnson" }; // Object with two properties
+    ```
+
+#### Operators
+
+Operators allow you to perform different kinds of operations on operands. JavaScript has several types of operators:
+
+-   **Arithmetic Operators**: Used to perform mathematical calculations.
+
+    ```javascript
+    let sum = 10 + 5; // Adds 10 and 5
+    let difference = 10 - 5; // Subtracts 5 from 10
+    ```
+
+-   **Comparison Operators**: Used to compare two values and return a boolean value, true or false.
+
+    ```javascript
+    let isEqual = 10 == "10"; // Returns true because it performs type coercion
+    let isIdentical = 10 === "10"; // Returns false because it checks both value and type
+    ```
+
+-   **Logical Operators**: Used to determine the logic between variables or values.
+
+    ```javascript
+    let isAdult = age > 18 && isActive; // Returns true if `age` is greater than 18 AND `isActive` is true
+    ```
+
+These basics form the backbone of JavaScript programming, allowing you to write dynamic scripts for web pages. Understanding and mastering these will enable you to manipulate data effectively and perform complex tasks with ease.
