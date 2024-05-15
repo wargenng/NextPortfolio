@@ -180,6 +180,10 @@ export const courses = {
                         "function-exercises",
                     ],
                 },
+                {
+                    id: 6,
+                    lesson: ["file-handling-and-dictionaries"],
+                },
             ],
             description:
                 "Coding is becoming an increasingly important skill for working professionals today, and Python is an incredibly flexible and useful language to know, so why wait to learn? Join a small group of peers and an expert instructor for an engaging introduction to Python! Throughout this 8-session course, students will learn the fundamentals of coding in Python and develop an understanding of the process and skills necessary to effectively write programs as a means of problem solving. This class is ideal for adult learners who are either new to coding or have prior experience but need a refresher.",
